@@ -1,0 +1,19 @@
+#!/bin/sh
+
+if [ -z "$(pgrep -x redshift)" ]; then
+    echo "%{F#65737E}%{F-}"
+else
+    TEMP=$(redshift -p 2> /dev/null | grep Color | awk '{print $3}' | tr -dc '[:digit:]')
+
+    if [ -z "$TEMP" ]; then
+        COLOR="{F#65737E}"
+    elif [ "$TEMP" -ge 5000 ]; then
+        COLOR="{F#8FA1B3}"
+    elif [ "$TEMP" -ge 4000 ]; then
+        COLOR="{F#EBCB8B}"
+    else
+        COLOR="{F#D08770}"
+    fi
+
+    echo %${COLOR} ${TEMP}K%{F-}
+fi

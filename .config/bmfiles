@@ -1,0 +1,9 @@
+# file shortcuts #
+cfb	~/.bashrc
+cfa	~/.config/aliasrc
+cfz	~/.zshrc
+cfv	~/.config/nvim/init.vim
+cfp     ~/.config/polybar/config
+cfb	~/.config/bspwm/bspwmrc
+cfs	~/.config/sxhkd/sxhkdrc
+cfc	~/.config/compton/config

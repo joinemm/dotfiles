@@ -1,0 +1,14 @@
+#!/bin/bash
+# gets shortcut files and directories and formats them properly
+
+# Output locations
+shell_shortcuts="$HOME/.config/shortcutrc"
+
+# remove old
+printf "# vim: filetype=sh\\nalias " > "$shell_shortcuts"
+
+# Format the `bmdirs` file in the correct syntax and send to config
+sed "s/\s*#.*$//;/^\s*$/d" "$HOME/.config/bmdirs" | tee >(awk '{print $1"=\"cd "$2" && ls -a\" \\"}' >> "$shell_shortcuts") 
+
+# Format the `bmfiles` file in the correct syntax and send to config
+sed "s/\s*#.*$//;/^\s*$/d"  "$HOME/.config/bmfiles" | tee >(awk '{print $1"=\"$EDITOR "$2"\" \\"}' >> "$shell_shortcuts")

@@ -1,0 +1,23 @@
+#!/bin/sh
+# global color definitions
+
+export colorbg="#2E3440"
+export colorfg="#D8DEE9"
+
+export color0="#3B4252"
+export color1="#BF616A"
+export color2="#A3BE8C"
+export color3="#EBCB8B"
+export color4="#81A1C1"
+export color5="#B48EAD"
+export color6="#88C0D0"
+export color7="#E5E9F0"
+
+export color8="#4C566A"
+export color9="#BF616A"
+export color10="#A3BE8C"
+export color11="#EBCB8B"
+export color12="#81A1C1"
+export color13="#B48EAD"
+export color14="#8FBCBB"
+export color15="#ECEFF4"

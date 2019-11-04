@@ -1,0 +1,9 @@
+#!/bin/sh
+
+current_layout=$(setxkbmap -print | grep symbols | egrep -o '\+(.{2})\+')
+
+if [ "$current_layout" == "+us+" ]; then
+    setxkbmap "fi"
+else
+    setxkbmap "us"
+fi

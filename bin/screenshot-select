@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# takes screenshot of selection and copies it to clipboard
+
+maim -s | xclip -selection clipboard -t image/png

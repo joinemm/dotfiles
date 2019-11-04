@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# takes screenshot of the whole screen and copies it to clipboard
+
+maim | xclip -selection clipboard -t image/png

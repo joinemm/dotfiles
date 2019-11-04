@@ -1,0 +1,91 @@
+# ~/.config/sxhkd/sxhkdrc
+
+-----------------------
+### launch programs ###
+-----------------------
+
+# terminal
+super + Return
+	alacritty
+
+# browser
+super + w
+	firefox-developer-edition
+
+# file manager
+super + r
+	pcmanfm
+
+# program launcher
+super + space
+	rofi -show run
+
+-------------------
+### run scripts ###
+-------------------
+
+# screenshot
+Print
+	screenshot
+
+# screenshot a selection
+shift + Print
+    screenshot-select
+
+# toggle keyboard layout
+super + o
+    toggle-kb-layout us fi
+
+---------------------
+### bspwm / sxhkd ###
+---------------------
+
+# reload bspwm
+super + alt + r
+	bspc wm -r
+
+# reload sxhkd
+super + shift + grave
+	pkill -USR1 -x sxhkd
+
+# close node
+super + q
+	bspc node -c
+
+# toggle window layout
+super + m
+	bspc desktop -l next
+
+# toggle window state
+super + t
+    toggle-window-state
+
+# focus in the given direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# swap current and biggest node
+super + g
+	bspc node -s biggest.local
+
+# focus or send to given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# move a floating window
+super + {Left,Down,Up,Right}
+    bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# resize windows (using custom script)
+super + alt + {h,j,k,l}
+    ~/.config/bspwm/resize {west,south,north,east}
+
+------------------
+### media keys ###
+------------------
+
+XF86Audio{Play,Next,Prev}
+    sp {play,next,prev}
+
+XF86Audio{Raise,Lower}Volume
+    pactl set-sink-volume 1 {+,-}1%

@@ -1,0 +1,19 @@
+#!/bin/sh
+alias ka="killall" \
+	pac="sudo pacman" \
+	sctl="sudo systemctl" \
+	f="$FILE" \
+	v="$EDITOR" \
+	shutdown="sudo shutdown -h now" \
+	ls="ls -hN --color=auto --group-directories-first" \
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+	yt="youtube-dl --add-metadata -i -o '%(upload_date)s-%(title)s.%(ext)s'" \
+	yta="yt -x -f bestaudio/best" \
+	ref="shortcuts >/dev/null; source ~/.config/shortcutrc" \
+	ffmpeg="ffmpeg -hide_banner" \
+	wifi="sudo wifi-menu" \
+	q="cd .." \
+    dot="yadm"
+
+vf() { fzf | xargs -r -I % $EDITOR % ;}
