@@ -5,6 +5,7 @@
 - **OS** = Arch Linux
 - **Window manager** = bspwm
 - **Hotkey manager** = sxhdk
+- **Status bar** = polybar
 - **Terminal** = alacritty
 - **Shell** = oh-my-zsh
 - **Text editor / IDE** = neovim
