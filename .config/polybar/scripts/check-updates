@@ -23,11 +23,17 @@ esac
 
 case $2 in
 "-p")
-    AMOUNT="$(check | sed '/^$/d' | wc -l)"
-    if [ "$AMOUNT" == "0" ]; then
-        echo ""
+    wget -q --spider http://google.com
+    
+    if [ $? -eq 0 ]; then
+        AMOUNT="$(check | sed '/^$/d' | wc -l)"
+        if [ "$AMOUNT" == "0" ]; then
+            echo ""
+        else
+            echo "$LOGO $AMOUNT"
+        fi
     else
-        echo "$LOGO $AMOUNT"
+        echo "No connection"
     fi
 ;;
 "-n")
