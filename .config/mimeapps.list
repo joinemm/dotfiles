@@ -2,9 +2,13 @@
 application/pdf=zathura.desktop;
 image/jpeg=sxiv-rifle.desktop;
 image/png=sxiv-rifle.desktop;
-image/gif=sxiv-rifle.desktop;
+image/gif=sxiv.desktop;
 image/webp=sxiv-rifle.desktop;
 image/bmp=sxiv-rifle.desktop;
 image/tiff=sxiv-rifle.desktop;
 
 [Removed Associations]
+
+[Default Applications]
+image/jpeg=sxiv-rifle.desktop
+image/gif=sxiv.desktop

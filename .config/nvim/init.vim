@@ -22,6 +22,7 @@ Plug 'HansPinckaers/ncm2-jedi'  " fast python completion (use ncm2 if you want t
 Plug 'ncm2/ncm2-bufword'  " buffer keyword completion
 Plug 'ncm2/ncm2-path'  " filepath completion
 Plug 'chrisbra/Colorizer' " colorize hex codes
+Plug 'Townk/vim-autoclose' " autoclose brackets
 
 call plug#end()
 

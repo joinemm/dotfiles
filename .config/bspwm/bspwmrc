@@ -8,7 +8,7 @@ bspc monitor -d 1st 2nd 3rd 4th 5th 6th 7th 8th 9th
 bspc config border_width		    3
 bspc config window_gap			    10
 bspc config top_padding			    0
-bspc_config split_ratio			    0.50
+bspc_config split_ratio			    0.618
 bspc_config borderless_monocle		true
 bspc_config gapless_monocle		    false
 bspc_config single_monocle		    true

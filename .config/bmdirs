@@ -8,4 +8,5 @@ miso    ~/Dropbox/projects/miso-rewrite
 cf      ~/.config
 sc	    ~/.scripts
 bin     ~/bin
-M       /mnt/samsung
+samsung /mnt/samsung
+kpop    /mnt/samsung/my_documents/pictures/kpop
