@@ -1,0 +1,281 @@
+/**
+ * @name Joinemm's Theme
+ * @author Joinemm#7184
+ * @version 1.1.0
+ * @description All my css changes in one file (for ED)
+ * @source https://github.com/joinemm/discord-css
+*/
+
+/* Solarized color scheme originally by Ethan Schnoover */
+:root {
+    --accent-color: #b58900;
+    --background-primary: #002b36;
+    --background-secondary: #073642;
+    --background-secondary-alt: #073642;
+    --background-tertiary: #002b36;
+    --background-accent: #839496;
+    --channeltextarea-background: #073642;
+    --text-normal: #93a1a1;
+    --text-muted: #586e75;
+    --channels-default: #93a1a1;
+    --interactive-normal: #839496;
+    --interactive-hover: #eee8d5;
+    --interactive-active: #eee8d5;
+    --interactive-muted: #586e75;
+    --header-secondary: #93a1a1;
+    --background-mentioned: #ffffff20;
+    --background-mentioned-hover: #ffffff30;
+    --background-floating: #002832;
+    --scrollbar-auto-thumb: #073642;
+    --scrollbar-auto-track: #002b36;
+    --text-link: #268bd2;
+    --main-font: Fira Code;
+}
+
+
+/* make compact mode more compact *
+ * ------------------------------ */
+.compact-T3H92H.wrapper-2a6GCs {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+}
+
+.compact-T3H92H .timestamp-3ZCmNB {
+    font-size: inherit;
+    width: auto;
+}
+
+.compact-T3H92H .contents-2mQqc9 {
+    margin-left: -100px;
+    padding-left: 120px;
+    text-indent: calc(-100px - -1rem);
+}
+
+.container-3npvBV {
+    top: -10px;
+}
+
+/* font config *
+ * ----------- */
+::placeholder, body, button, input, select, textarea {
+    font-family: var(--main-font);
+}
+
+code {
+    font-family: var(--main-font);
+    font-size: 1rem !important;
+}
+
+/* Main Theme *
+ * ---------- */
+
+/* disable gift button */
+.button-38aScr[aria-label="Send a gift"] {
+    display: none
+}
+
+.scrollerThemed-2oenus.themeDark-2cjlUp.scrollerTrack-1ZIpsv>.scroller-2FKFPG::-webkit-scrollbar-track,
+.scrollerThemed-2oenus.themeDark-2cjlUp.scrollerTrack-1ZIpsv>.scrollerStore-390omS::-webkit-scrollbar-track,
+.theme-dark .scrollerWrap-2lJEkd.scrollerTrack-1ZIpsv>.scroller-2FKFPG::-webkit-scrollbar-track,
+.theme-dark .scrollerWrap-2lJEkd.scrollerTrack-1ZIpsv>.scrollerStore-390omS::-webkit-scrollbar-track,
+.theme-dark .da-messageGroupWrapper, .theme-dark .bodyInner-245q0L, .theme-dark .footer-1fjuF6, .tabBody-3YRQ8W,
+.theme-dark .bottomDivider-1K9Gao, .theme-dark .headerNormal-T_seeN, .theme-dark .root-1gCeng {
+    background-color: var(--background-primary);
+}
+
+.da-popouts .da-container, .da-friendsTableHeader, .da-friendsTable, .da-autocomplete,
+.da-themedPopout, .da-footer, .da-userPopout > *, .da-autocompleteHeaderBackground,
+.theme-dark .bar-2Qqk5Z, .theme-dark .payment-xT17Mq, .theme-dark .paymentPane-3bwJ6A,
+.theme-dark .paginator-166-09, .theme-dark .codeRedemptionRedirect-1wVR4b,
+.theme-dark .scrollerThemed-2oenus.themedWithTrack-q8E3vB .scroller-2FKFPG::-webkit-scrollbar-thumb {
+    background-color: var(--background-secondary);
+    border-color: transparent !important;
+}
+
+.scrollerThemed-2oenus.themeDark-2cjlUp .scroller-2FKFPG::-webkit-scrollbar-thumb,
+.theme-dark .scrollerWrap-2lJEkd .scroller-2FKFPG::-webkit-scrollbar-thumb,
+.theme-dark .inset-3sAvek, .theme-dark .quickMessage-1yeL4E,
+.wrapper-2aW0bm, .theme-dark .autocomplete-1vrmpx, .searchBar-3dMhjb,
+.theme-dark .body-3iLsc4, .theme-dark .footer-2gL1pp, .cardPrimary-1Hv-to {
+    background-color: var(--background-secondary);
+}
+
+/* Force BetterDiscord settings items to match normal settings items. */
+.theme-dark #bd-settings-sidebar .ui-tab-bar-item {
+    color: var(--interactive-normal);
+}
+
+/* Recolor BD settings headers, Nitro settings item and Add Channel icon */
+.theme-dark #bd-settings-sidebar .ui-tab-bar-header, .da-addButtonIcon  {
+    color: var(--channels-default) !important;
+}
+
+/* Force BetterDiscord *active* settings items to match normal active settings items. */
+.theme-dark #bd-settings-sidebar .ui-tab-bar-item.selected,
+.theme-dark .da-autocompleteRow .da-selectorSelected {
+    background-color: var(--background-modifier-selected);
+    color: var(--interactive-active);
+}
+
+/* scrollbars */
+.da-messagesWrapper .da-scroller::-webkit-scrollbar,
+.da-messagesWrapper .da-scroller::-webkit-scrollbar-track-piece {
+    background-color: var(--background-tertiary) !important;
+    border-color: rgba(0,0,0,0) !important;
+}
+
+.da-scrollerThemed .da-scroller::-webkit-scrollbar-thumb,
+.da-scrollerWrap .da-scroller::-webkit-scrollbar-thumb {
+    background-color: var(--background-secondary) !important;
+    border-color: var(--background-tertiary) !important;
+}
+
+.theme-dark .scrollerThemed-2oenus.themedWithTrack-q8E3vB .scroller-2FKFPG::-webkit-scrollbar-track-piece {
+    background-color: var(--background-primary) !important;
+    border-color: rgba(0,0,0,0) !important;
+}
+
+.theme-dark .selectorSelected-1_M1WV, .newMessagesBar-mujexs,
+.theme-dark .searchAnswer-3Dz2-q, .theme-dark .searchFilter-2ESiM3,
+.theme-dark .progress-1IcQ3A, .themeDefault-24hCdX,
+.theme-dark .lookFilled-1Gx00P.colorPrimary-3b3xI6 {
+    background-color: var(--background-accent);
+}
+
+.theme-dark .container-3ayLPN {
+    background-color: var(--background-tertiary);
+}
+
+.theme-dark .option-96V44q.selected-rZcOL- {
+    background-color: var(--background-floating);
+}
+
+.theme-dark .pageIndicator-1gAbyA, .theme-dark .pageButtonNext-V2kUq0,
+.theme-dark .pageButtonPrev-1Y-47D {
+    border-color: var(--background-accent);
+}
+
+/* remove gradients */
+.theme-dark .da-option:after {
+    background-image: none !important;
+}
+
+/* misc */
+.scroller-2FKFPG::-webkit-scrollbar, .barButtonBase-3UKlW2,
+.theme-dark .scrollerThemed-2oenus.themeGhostHairline-DBD-2d .scroller-2FKFPG::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+.theme-dark .option-96V44q:after {
+    display: none;
+}
+
+.theme-dark .paginator-2CA79G {
+    color: #dcddde;
+}
+
+/* recolor discord blurple */
+.themeDefault-24hCdX.valueChecked-m-4IJZ,
+.lookFilled-1Gx00P.colorBrand-3pXr91, .barFill-23-gu-,
+.mentioned-xhSam7:before {
+    background-color: var(--accent-color);
+}
+
+div[style*="border-color: rgb(114, 137, 218);"] {
+    border-color: var(--accent-color) !important;
+}
+
+div[style*="background-color: rgb(114, 137, 218);"] {
+    background-color: var(--accent-color) !important;
+}
+
+div[style*="color: rgb(114, 137, 218);"] {
+    color: var(--accent-color) !important;
+}
+
+div[style*="color: rgb(255, 255, 255);"] {
+    color: #ffffff !important;
+}
+/* Make code blocks use solarized syntax highlighting
+ * Original Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmail.com>
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #002b36;
+  color: #839496;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #586e75;
+}
+
+/* Solarized Green */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-addition {
+  color: #859900;
+}
+
+/* Solarized Cyan */
+.hljs-number,
+.hljs-string,
+.hljs-meta .hljs-meta-string,
+.hljs-literal,
+.hljs-doctag,
+.hljs-regexp {
+  color: #2aa198;
+}
+
+/* Solarized Blue */
+.hljs-title,
+.hljs-section,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #268bd2;
+}
+
+/* Solarized Yellow */
+.hljs-attribute,
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-class .hljs-title,
+.hljs-type {
+  color: #b58900;
+}
+
+/* Solarized Orange */
+.hljs-symbol,
+.hljs-bullet,
+.hljs-subst,
+.hljs-meta,
+.hljs-meta .hljs-keyword,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-link {
+  color: #cb4b16;
+}
+
+/* Solarized Red */
+.hljs-built_in,
+.hljs-deletion {
+  color: #dc322f;
+}
+
+.hljs-formula {
+  background: #073642;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}

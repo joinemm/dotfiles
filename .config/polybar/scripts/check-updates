@@ -33,7 +33,7 @@ case $2 in
             echo "$LOGO $AMOUNT"
         fi
     else
-        echo "No connection"
+        echo ""
     fi
 ;;
 "-n")

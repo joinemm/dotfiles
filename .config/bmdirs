@@ -2,11 +2,7 @@
 h	    ~/
 d	    ~/Documents
 D	    ~/Downloads
-db	    ~/Dropbox
-dbp     ~/Dropbox/projects
-miso    ~/Dropbox/projects/miso-rewrite
+miso    ~/gdrive/programming/discord-bots/miso-bot
+p       ~/gdrive/programming
 cf      ~/.config
-sc	    ~/.scripts
 bin     ~/bin
-samsung /mnt/samsung
-kpop    /mnt/samsung/my_documents/pictures/kpop

@@ -1,11 +1,12 @@
 #!/bin/sh
 alias ka="killall" \
 	pac="sudo pacman" \
-	sctl="sudo systemctl" \
-	f="$FILE" \
+    sctl="sudo systemctl" \
 	v="$EDITOR" \
 	shutdown="sudo shutdown -h now" \
-	ls="ls -hN --color=auto --group-directories-first" \
+	ls="ls --color=auto --group-directories-first" \
+    la="ls -A" \
+    ll="ls -alF" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	yt="youtube-dl --add-metadata -i -o '%(upload_date)s-%(title)s.%(ext)s'" \
@@ -14,6 +15,14 @@ alias ka="killall" \
 	ffmpeg="ffmpeg -hide_banner" \
 	wifi="sudo wifi-menu" \
 	q="cd .." \
-    dot="yadm"
+    dotfiles="yadm" \
+    ssh="TERM=xterm-256color ssh" \
+    vim="nvim" \
+    mv="mv -i" \
+    rm="rm -i" \
+    vifm="vifmrun" \
+    disk="du -shc * | sort -rh" \
+    gs="git status" \
+
 
 vf() { fzf | xargs -r -I % $EDITOR % ;}

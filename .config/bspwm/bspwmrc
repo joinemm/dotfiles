@@ -1,38 +1,28 @@
 #!/bin/sh
 
-#bspc monitor -d chat terminal code web music misc misc misc misc misc
-#bspc monitor -d 하나 둘 셋 넷 다섯 여섯 일곱 여덟 아홉
-bspc monitor -d 1st 2nd 3rd 4th 5th 6th 7th 8th 9th 
-#bspc monitor -d 1 2 3 4 5 6 7 8 9 
+bspc monitor -d 1 2 3 4 5 6 7 8 9
 
-bspc config border_width		    3
+bspc config border_width		    2
 bspc config window_gap			    10
 bspc config top_padding			    0
-bspc_config split_ratio			    0.618
-bspc_config borderless_monocle		true
-bspc_config gapless_monocle		    false
-bspc_config single_monocle		    true
-bspc_config focus_follows_pointer	true
-bspc_config auto_alternate          true
-bspc_config auto_cancel             true
-
-#bspc_config pointer_modifier		mod4
-#bspc config pointer_action1         move_tiled
-#bspc config pointer_action2         resize_side
-#bspc config pointer_action1         resize_corner
+bspc config split_ratio			    0.5
+bspc config borderless_monocle		false
+bspc config gapless_monocle		    false
+bspc config single_monocle		    true
+bspc config focus_follows_pointer	false
+bspc config auto_alternate          true
+bspc config auto_cancel             true
 
 # colors
-bspc_config normal_border_color		"$color1"
-bspc_config focused_border_color	"$color1"
-bspc_config active_border_color		"$color15"
-bspc_config presel_feedback_color	"$color15"
+bspc config normal_border_color		"#002b36"
+bspc config focused_border_color	"#ffffff"
 
 # rules
 bspc rule -a Yad                    state=floating
-bspc rule -a Discord                desktop=primary:^1
-bspc rule -a Spotify                desktop=primary:^5
 bspc rule -a Zathura                state=tiled
 
 # start polybar (after bspwm so the module works)
 ~/.config/polybar/scripts/launch.sh &
-~/.config/redshift/launch &
+
+# set cursor
+xsetroot -cursor_name left_ptr

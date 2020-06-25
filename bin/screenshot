@@ -1,5 +1,17 @@
 #!/bin/sh
 
-# takes screenshot of the whole screen and copies it to clipboard
+# script that takes screenshots,
+# saves them and copies them to the clipboard
 
-maim | xclip -selection clipboard -t image/png
+if [ -z "$1" ]; then
+    CMD="maim"
+elif [ $1 == "window" ]; then
+    CMD="maim -i $(xdotool getactivewindow)"
+elif [ $1 == "select" ]; then
+    CMD="maim -s"
+else
+    echo "invalid argument, defaulting to full screenshot..."
+    CMD="maim"
+fi
+
+$CMD | tee ~/screenshots/$(date +%s).png | xclip -selection clipboard -t image/png

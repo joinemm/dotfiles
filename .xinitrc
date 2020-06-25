@@ -1,14 +1,16 @@
 #!/bin/sh
 
 # fix matlab
-export _JAVA_AWT_WM_NONREPARENTING=1
+#export _JAVA_AWT_WM_NONREPARENTING=1
+
+setxkbmap -option caps:super
+xset r rate 300 50
+xset -b
 
 # autostart programs
 dunst &
-compton --config ~/.config/compton/config &
-dropbox &
 ~/.fehbg
-xset r rate 300 50
+picom &
 
 # from default config. does something important
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then

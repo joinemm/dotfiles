@@ -1,17 +1,17 @@
 #!/bin/sh
 # global color definitions
 
-export colorbg="#2E3440"
-export colorfg="#D8DEE9"
+export colorbg="#002b36"
+export colorfg="#839496"
 
-export color0="#3B4252"
-export color1="#BF616A"
-export color2="#A3BE8C"
-export color3="#EBCB8B"
-export color4="#81A1C1"
-export color5="#B48EAD"
-export color6="#88C0D0"
-export color7="#E5E9F0"
+export color0="#073642"
+export color1="#dc322f"
+export color2="#859900"
+export color3="#b58900"
+export color4="#268bd2"
+export color5="#d33682"
+export color6="#2aa198"
+export color7="#eee8d5"
 
 export color8="#4C566A"
 export color9="#BF616A"

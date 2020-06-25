@@ -1,6 +1,3 @@
-autoload -U colors && colors
-export PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
-
 # History
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -15,11 +12,21 @@ _comp_options+=(globdots) # include hidden files
 # Path to your oh-my-zsh installation.
 export ZSH="/home/joinemm/.oh-my-zsh"
 
+# PURE prompt
+fpath+=$HOME/.oh-my-zsh/custom/pure
+autoload -U promptinit; promptinit
+
+zstyle :prompt:pure:path color yellow
+zstyle :prompt:pure:prompt:success color blue
+zstyle :prompt:pure:prompt:error color red
+
+prompt pure
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="avit"
+ZSH_THEME=""
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -98,6 +105,7 @@ export ARCHFLAGS="-arch x86_64"
 # Load aliases and shortcuts if existent.
 [ -f "$HOME/.config/shortcutrc" ] && source "$HOME/.config/shortcutrc"
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
+
 
 # Load zsh-syntax-highlighting; should be last.
 #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null

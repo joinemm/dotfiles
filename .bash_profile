@@ -6,14 +6,17 @@
 # program definitions
 export EDITOR="nvim"
 export TERMINAL="alacritty"
-export BROWSER="firefox-developer-edition"
+export BROWSER="firefox"
 export FILEM="pcmanfm"
 
-# set path
-export PATH=$PATH:$HOME/bin:$HOME/.local/bin
+# fix DPI scaling
+export WINIT_X11_SCALE_FACTOR=1.0
 
-# source api keys from dropbox
-source $HOME/Dropbox/keys
+# set path
+export PATH=$PATH:$HOME/bin:$HOME/.local/bin:$HOME/.gem/ruby/2.7.0/bin:$HOME/.poetry/bin
+
+# source api keys from drive
+source $HOME/gdrive/keys
 
 # source colors from color file
 source $HOME/.config/colors

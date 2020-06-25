@@ -1,16 +1,21 @@
+# dunstrc
+# vim: ft=cfg
+
 [global]
     monitor = 0
     follow = keyboard
-    geometry = "500x5-20-20"
+    # geometry format [width]x[height][+/-][x][+/-][y]
+    # height is measured in number of notifications, everything else in pixels
+    geometry = "500x5-20-52"
     indicate_hidden = yes
     shrink = yes
-    transparency = 20
+    transparency = 0
     notification_height = 0
-    separator_height = 2
+    separator_height = 1
     padding = 10
     horizontal_padding = 10
     frame_width = 0
-    frame_color = "#ECEFF4"
+    frame_color = "#93a1a1"
 
     # Define a color for the separator.
     # possible values are:
@@ -18,13 +23,13 @@
     #  * foreground: use the same color as the foreground;
     #  * frame: use the same color as the frame;
     #  * anything else will be interpreted as a X color.
-    separator_color = frame
+    separator_color = foreground
 
     # Sort messages by urgency.
     sort = yes
 
     idle_threshold = 120
-    font = Fira Code 10
+    font = Fira Code 11
     line_height = 0
     markup = full
 
@@ -50,7 +55,6 @@
     show_indicators = yes
     icon_position = left
     max_icon_size = 64
-    #icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/:/usr/share/icons/Adwaita/256x256/status/
     sticky_history = yes
     history_length = 20
     dmenu = /usr/bin/dmenu -p dunst:
@@ -63,6 +67,7 @@
     class = Dunst
     startup_notification = true
     force_xinerama = false
+
 [experimental]
     per_monitor_dpi = false
 
@@ -73,80 +78,16 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    # IMPORTANT: colors have to be defined in quotation marks.
-    # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#4C566A"
-    foreground = "#D8DEE9"
+    background = "#839496"
+    foreground = "#002b36"
     timeout = 5
-    # Icon for notifications with low urgency, uncomment to enable
-    #icon = /path/to/icon
 
 [urgency_normal]
-    background = "#4C566A"
-    foreground = "#D8DEE9"
+    background = "#839496"
+    foreground = "#002b36"
     timeout = 5
 
 [urgency_critical]
-    background = "#cc2421"
-    foreground = "#DEDEDE"
-    frame_color = "#fabd2f"
+    background = "#dc322f"
+    foreground = "#eee8d5"
     timeout = 0
-
-# Every section that isn't one of the above is interpreted as a rules to
-# override settings for certain messages.
-# Messages can be matched by "appname", "summary", "body", "icon", "category",
-# "msg_urgency" and you can override the "timeout", "urgency", "foreground",
-# "background", "new_icon" and "format".
-# Shell-like globbing will get expanded.
-#
-# SCRIPTING
-# You can specify a script that gets run when the rule matches by
-# setting the "script" option.
-# The script will be called as follows:
-#   script appname summary body icon urgency
-# where urgency can be "LOW", "NORMAL" or "CRITICAL".
-#
-# NOTE: if you don't want a notification to be displayed, set the format
-# to "".
-# NOTE: It might be helpful to run dunst -print in a terminal in order
-# to find fitting options for rules.
-
-#[espeak]
-#    summary = "*"
-#    script = dunst_espeak.sh
-
-#[script-test]
-#    summary = "*script*"
-#    script = dunst_test.sh
-
-#[ignore]
-#    # This notification will not be displayed
-#    summary = "foobar"
-#    format = ""
-
-#[history-ignore]
-#    # This notification will not be saved in history
-#    summary = "foobar"
-#    history_ignore = yes
-
-#[signed_on]
-#    appname = Pidgin
-#    summary = "*signed on*"
-#    urgency = low
-#
-#[signed_off]
-#    appname = Pidgin
-#    summary = *signed off*
-#    urgency = low
-#
-#[says]
-#    appname = Pidgin
-#    summary = *says*
-#    urgency = critical
-#
-#[twitter]
-#    appname = Pidgin
-#    summary = *twitter.com*
-#    urgency = normal
-#
-# vim: ft=cfg

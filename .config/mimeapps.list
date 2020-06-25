@@ -1,14 +1,36 @@
 [Added Associations]
 application/pdf=zathura.desktop;
-image/jpeg=sxiv-rifle.desktop;
-image/png=sxiv-rifle.desktop;
+image/jpeg=imv.desktop;
+image/png=imv.desktop;imv.desktop;
 image/gif=sxiv.desktop;
-image/webp=sxiv-rifle.desktop;
-image/bmp=sxiv-rifle.desktop;
-image/tiff=sxiv-rifle.desktop;
+image/webp=imv.desktop;
+image/bmp=imv.desktop;
+image/tiff=imv.desktop;
+x-scheme-handler/http=firefox.desktop;
+x-scheme-handler/https=firefox.desktop;
+x-scheme-handler/ftp=firefox.desktop;
+x-scheme-handler/chrome=firefox.desktop;
+text/html=firefox.desktop;
+application/x-extension-htm=firefox.desktop;
+application/x-extension-html=firefox.desktop;
+application/x-extension-shtml=firefox.desktop;
+application/xhtml+xml=firefox.desktop;
+application/x-extension-xhtml=firefox.desktop;
+application/x-extension-xht=firefox.desktop;
 
 [Removed Associations]
 
 [Default Applications]
-image/jpeg=sxiv-rifle.desktop
-image/gif=sxiv.desktop
+image/jpeg=imv.desktop
+image/gif=imv.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/ftp=firefox.desktop
+x-scheme-handler/chrome=firefox.desktop
+text/html=firefox.desktop
+application/x-extension-htm=firefox.desktop
+application/x-extension-html=firefox.desktop
+application/x-extension-shtml=firefox.desktop
+application/xhtml+xml=firefox.desktop
+application/x-extension-xhtml=firefox.desktop
+application/x-extension-xht=firefox.desktop

@@ -2,7 +2,9 @@
 
 if [ -z "$(pgrep -x redshift)" ]; then
     redshift &
+    notify-send "Redshift ON"
 else
     redshift -x
     killall redshift
+    notify-send "Redshift OFF"
 fi

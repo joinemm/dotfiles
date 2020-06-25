@@ -2,14 +2,10 @@
 alias h="cd ~/ && ls -a" \
 d="cd ~/Documents && ls -a" \
 D="cd ~/Downloads && ls -a" \
-db="cd ~/Dropbox && ls -a" \
-dbp="cd ~/Dropbox/projects && ls -a" \
-miso="cd ~/Dropbox/projects/miso-rewrite && ls -a" \
+miso="cd ~/gdrive/programming/discord-bots/miso-bot && ls -a" \
+p="cd ~/gdrive/programming && ls -a" \
 cf="cd ~/.config && ls -a" \
-sc="cd ~/.scripts && ls -a" \
 bin="cd ~/bin && ls -a" \
-samsung="cd /mnt/samsung && ls -a" \
-kpop="cd /mnt/samsung/my_documents/pictures/kpop && ls -a" \
 cfb="$EDITOR ~/.bashrc" \
 cfa="$EDITOR ~/.config/aliasrc" \
 cfz="$EDITOR ~/.zshrc" \
