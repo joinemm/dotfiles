@@ -5,4 +5,7 @@ D	    ~/Downloads
 miso    ~/gdrive/programming/discord-bots/miso-bot
 p       ~/gdrive/programming
 cf      ~/.config
-bin     ~/bin
+b       ~/bin
+ss      ~/screenshots
+g       ~/gdrive
+pbs     ~/.config/polybar/scripts
