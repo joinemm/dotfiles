@@ -12,18 +12,19 @@ format-padding = 0
 
 [bar/main]
 ;monitor = eDP-1-1
-width = 100%
+width = 99%
+offset-x = 0.5%
 height = 32
-radius = 0
+radius = 16
 fixed-center = true
 cursor-click = pointer
 cursor-scroll = ns-resize
 underline-size = 2
 border-size = 0
 padding-right = 1
-padding-left = 0
+padding-left = 1
 module-margin-left  = 1
-module-margin-right = 0
+module-margin-right = 1
 wm-restack = bspwm
 bottom = true
 enable-ipc = true
@@ -41,6 +42,7 @@ accent-color = #b58900
 
 ;# default font
 font-0 = Fira Code:style=Regular:size=12;2
+;# twitter emojis
 font-1 = Twemoji:style=Regular:scale=5;2
 ;# chinese fonts
 font-2 = Sarasa Mono CL:style=Regular:size=12;2
@@ -51,14 +53,14 @@ font-5 = Sarasa Mono HC:style=Regular:size=12;2
 font-6 = NanumGothicCoding:style=Regular:size=12;2
 ;# japanese fonts
 font-7 = M+ 1mn:style=Bold:size=12;2
-;# icon fonts
-font-8 = FontAwesome5Brands:style=Solid:size=13;2
-font-9 = FontAwesome5Free:style=Solid:size=13;2
+;# font awesome icon fonts
+font-8 = FontAwesome5Brands:style=Solid:size=13;3
+font-9 = FontAwesome5Free:style=Solid:size=13;3
 
 ;# bar modules
-modules-left = apps bspwm xwindow
+modules-left = bspwm
 modules-center = date
-modules-right = spotify-prev spotify spotify-play-pause spotify-next weather redshift xbacklight pulseaudio battery wlan
+modules-right = weather xbacklight pulseaudio battery wlan
 
 [module/separator]
 type = custom/text
@@ -68,26 +70,31 @@ content = "|"
 type = internal/bspwm
 enable-click = true
 
-label-focused = %name%
-label-focused-foreground = ${root.foreground-bright}
-label-focused-background = ${root.background-bright}
-label-focused-underline = ${root.accent-color}
-label-focused-padding = 2
+label-active = " "
+label-occupied = " "
+label-urgent = " "
+label-empty = " "
 
-label-occupied = %name%
+; label-focused = %name%
+label-active-foreground = ${root.accent-color}
+; label-focused-background = ${root.background-bright}
+; label-focused-underline = ${root.accent-color}
+; label-focused-padding = 1
+
+; label-occupied = %name%
 label-occupied-foreground = ${root.foreground}
-label-occupied-padding = 1
+; label-occupied-padding = 1
 
-label-urgent = %name%
-label-urgent-background = ${root.accent-color}
-label-urgent-padding = 2
+; label-urgent = %name%
+label-urgent-foreground = ${root.accent-color}
+; label-urgent-padding = 1
 
-label-empty = 
+; label-empty =
 
 [module/apps]
 type = custom/text
 content = " "
-content-foreground = ${root.accent-color}
+content-foreground = ${root.foreground-bright}
 click-left = rofi -show drun
 
 [module/redshift]
@@ -110,11 +117,11 @@ format = <label>
 type = internal/pulseaudio
 format-volume = <ramp-volume> <label-volume>
 label-volume = %percentage%%
-label-muted =  
+label-muted =  ---
 label-muted-foreground = ${root.foreground-muted}
-ramp-volume-0 = 🔈
-ramp-volume-1 = 🔉
-ramp-volume-2 = 🔊
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
 
 [module/battery]
 type = internal/battery
@@ -127,7 +134,8 @@ format-full = <ramp-capacity> <label-full>
 label-charging =  %percentage%%
 label-discharging = %percentage%%
 label-full = %percentage%%
-ramp-capacity-0 = 
+ramp-capacity-0 = !
+ramp-capacity-0-foreground = #dc322f
 ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
@@ -143,7 +151,7 @@ type = custom/script
 tail = true
 ;format-prefix = " "
 ;format-prefix = "|"
-format = <label>
+format = |<label>|
 exec = ~/.config/polybar/scripts/scroll_spotify_status.sh
 
 [module/spotify-prev]
@@ -188,7 +196,7 @@ interface = wlp58s0
 interval = 1
 format-connected = 
 format-connected-foreground = ${root.accent-color}
-format-disconnected = X
+format-disconnected = 
 format-disconnected-foreground = #dc322f
 
 [module/network]

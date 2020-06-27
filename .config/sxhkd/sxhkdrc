@@ -21,7 +21,7 @@ super + space
 	rofi -show run
 
 # fuzzy find and open in vim
-super + f
+super + g
     bspc rule -a Alacritty -o state=floating && $TERMINAL -e fzvim
 
 -------------------
@@ -84,12 +84,20 @@ super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
 # swap current and biggest node
-super + g
+super + e
 	bspc node -s biggest.local
 
-# focus or send to given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+# send and focus to given desktop
+super + alt + {1-9}
+    id=$(bspc query -N -n); bspc node -d ^{1-9}; bspc node -f ${id}
+
+# focus to given desktop
+super + {1-9}
+	bspc desktop -f '^{1-9}'
+
+# cycle between desktops
+super + {bracketleft,bracketright}
+   bspc desktop -f {prev.occupied,next.occupied}
 
 # move a floating window
 super + {Left,Down,Up,Right}
@@ -98,10 +106,6 @@ super + {Left,Down,Up,Right}
 # resize windows (using custom script)
 super + alt + {h,j,k,l}
     ~/.config/bspwm/resize {west,south,north,east}
-
-# select previous / next desktop
-super + alt + {p,n}
-    bspc desktop -f {prev.occupied,next.occupied}
 
 ------------------
 ### media keys ###
