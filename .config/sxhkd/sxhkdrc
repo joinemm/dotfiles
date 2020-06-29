@@ -6,15 +6,15 @@
 
 # terminal
 super + Return
-	$TERMINAL
+	alacritty
 
 # browser
 super + w
-	$BROWSER
+	focus-or-open Navigator firefox
 
 # file manager
 super + r
-	$FILEM
+	pcmanfm
 
 # program launcher
 super + space

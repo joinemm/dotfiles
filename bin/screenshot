@@ -14,4 +14,4 @@ else
     CMD="maim"
 fi
 
-$CMD | tee ~/screenshots/$(date +%s).png | xclip -selection clipboard -t image/png
+$CMD | tee ~/screenshots/$(filenamedate).png | xclip -selection clipboard -t image/png

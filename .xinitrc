@@ -1,18 +1,22 @@
 #!/bin/sh
 
-# fix matlab
+# runs on X init
+
+echo "$(date --rfc-3339=seconds) $0 - .xinitrc" >> ~/.startup.log
+
+# tiling wm fix for java programs like matlab
 #export _JAVA_AWT_WM_NONREPARENTING=1
 
+# remap caps lock to super
 setxkbmap -option caps:super
+
+# set faster key repeat rate
 xset r rate 300 50
+
+# disable bell
 xset -b
 
-# autostart programs
-dunst &
-~/.fehbg
-picom &
-
-# from default config. does something important
+# run X scripts set in etc if any are present
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
   [ -x "$f" ] && . "$f"
@@ -20,6 +24,12 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-# start hotkey daemon and lauch window manager
-sxhkd -m 1 &
+# set wallpaper
+~/.fehbg
+
+# start programs
+dunst &
+picom &
+sxhkd &
+
 exec bspwm

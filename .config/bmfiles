@@ -6,4 +6,4 @@ cfp     ~/.config/polybar/config
 cfb	    ~/.config/bspwm/bspwmrc
 cfs	    ~/.config/sxhkd/sxhkdrc
 cfc	    ~/.config/picom/picom.conf
-cfd     ~/EnhancedDiscord/plugins/joinemms.theme.css
+cfd     ~/EnhancedDiscord/discord-css/joinemms.theme.css

@@ -1,32 +1,6 @@
 #!/bin/sh
 
-# remap caps lock to super
-setxkbmap -option caps:super
+echo "$(date --rfc-3339=seconds) $0 - .xprofile" >> ~/.startup.log
 
-# increase key repeat rate
-xset r rate 300 50
-
-# program definitions
-export EDITOR="nvim"
-export TERMINAL="alacritty"
-export BROWSER="firefox"
-export FILEM="pcmanfm"
-
-# fix DPI scaling
-export WINIT_X11_SCALE_FACTOR=1.0
-
-# set path
-export PATH=$PATH:$HOME/bin:$HOME/.local/bin:$HOME/.gem/ruby/2.7.0/bin
-
-# source api keys from dropbox
-source $HOME/Dropbox/keys
-
-# source colors from color file
-source $HOME/.config/colors
-
-# autostart programs
-dunst &
-~/.fehbg
-picom
-sxhkd -m 1 &
-exec bspwm
+~/.bash_profile
+~/.xinitrc

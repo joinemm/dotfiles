@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo "$(date --rfc-3339=seconds) $0 - .bashrc" >> ~/.startup.log
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 

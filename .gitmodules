@@ -1,0 +1,3 @@
+[submodule "EnhancedDiscord/discord-css"]
+	path = EnhancedDiscord/discord-css
+	url = https://github.com/joinemm/discord-css

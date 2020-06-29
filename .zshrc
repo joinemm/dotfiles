@@ -1,3 +1,7 @@
+# Runs on zsh shell startup
+
+echo "$(date --rfc-3339=seconds) $0 - .zshrc" >> ~/.startup.log
+
 # History
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -15,27 +19,22 @@ export ZSH="/home/joinemm/.oh-my-zsh"
 # PURE prompt
 fpath+=$HOME/.oh-my-zsh/custom/pure
 autoload -U promptinit; promptinit
-
 zstyle :prompt:pure:path color yellow
 zstyle :prompt:pure:prompt:success color blue
 zstyle :prompt:pure:prompt:error color red
-
 prompt pure
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME=""
 
-# Uncomment the following line to use case-sensitive completion.
+# Case-sensitive completion.
 # CASE_SENSITIVE="true"
 
-# Uncomment the following line to use hyphen-insensitive completion.
+# Hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
+# Disable bi-weekly auto-update checks.
 DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
@@ -58,7 +57,7 @@ DISABLE_AUTO_UPDATE="true"
 DISABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -90,14 +89,7 @@ unsetopt correct
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='nvim'
-fi
+export LANG=en_US.UTF-8
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
@@ -106,6 +98,8 @@ export ARCHFLAGS="-arch x86_64"
 [ -f "$HOME/.config/shortcutrc" ] && source "$HOME/.config/shortcutrc"
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 
+# source command not found hook
+source /usr/share/doc/find-the-command/ftc.zsh
 
 # Load zsh-syntax-highlighting; should be last.
-#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh #2>/dev/null

@@ -1,13 +1,13 @@
 #!/bin/sh
-#
+
 # profile file symlinked to all shells
 # runs on login
 
-# program definitions
+echo "$(date --rfc-3339=seconds) $0 - .bash_profile" >> ~/.startup.log
+
+# program definitions for easy switching
 export EDITOR="nvim"
 export TERMINAL="alacritty"
-export BROWSER="firefox"
-export FILEM="pcmanfm"
 
 # fix DPI scaling
 export WINIT_X11_SCALE_FACTOR=1.0
@@ -21,10 +21,7 @@ source $HOME/gdrive/keys
 # source colors from color file
 source $HOME/.config/colors
 
-# source bashrc but only if shell is bash
-echo "$0" | grep "bash$" >/dev/null && [ -f ~/.bashrc ] && source "$HOME/.bashrc"
-
-# start X
+# start X if on tty1
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     startx
 fi
