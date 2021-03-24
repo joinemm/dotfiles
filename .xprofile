@@ -1,6 +1,0 @@
-#!/bin/sh
-
-echo "$(date --rfc-3339=seconds) $0 - .xprofile" >> ~/.startup.log
-
-~/.bash_profile
-~/.xinitrc

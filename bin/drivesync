@@ -1,3 +1,0 @@
-#!/usr/bin/sh
-
-ruby $HOME/bin/drivesyncbin/drivesync.rb

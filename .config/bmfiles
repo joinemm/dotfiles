@@ -1,9 +1,0 @@
-# file shortcuts #
-cfa	    ~/.config/aliasrc
-cfz	    ~/.zshrc
-cfv	    ~/.config/nvim/init.vim
-cfp     ~/.config/polybar/config
-cfb	    ~/.config/bspwm/bspwmrc
-cfs	    ~/.config/sxhkd/sxhkdrc
-cfc	    ~/.config/picom/picom.conf
-cfd     ~/EnhancedDiscord/discord-css/joinemms.theme.css
