@@ -1,4 +1,5 @@
 #!/bin/sh
+
 # Give this script two keyboard layouts as arguments and it will toggle between them
 # eg. toggle-kb-layout us fi
 

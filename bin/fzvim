@@ -1,8 +1,0 @@
-#!/bin/sh
-killall fzf 2> /dev/null
-FILE="$(fzf)"
-if [ -n "$FILE" ]
-then
-    bspc node focused -t tiled
-    nvim $FILE
-fi

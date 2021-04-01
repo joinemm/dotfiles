@@ -7,3 +7,4 @@ cfb	    ~/.config/bspwm/bspwmrc
 cfs	    ~/.config/sxhkd/sxhkdrc
 cfc	    ~/.config/picom/picom.conf
 cfd     ~/EnhancedDiscord/discord-css/joinemms.theme.css
+cfx     ~/.xinitrc

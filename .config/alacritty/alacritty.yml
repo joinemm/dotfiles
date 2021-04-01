@@ -8,6 +8,7 @@ window:
 
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: false
+  dynamic_title: true
 
   # Window title
   title: Alacritty
@@ -95,9 +96,6 @@ mouse:
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
   save_to_clipboard: false
-
-# Allow terminal applications to change Alacritty's window title.
-dynamic_title: true
 
 cursor:
   # Values for `style`:

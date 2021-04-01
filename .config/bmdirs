@@ -2,8 +2,8 @@
 h	    ~/
 d	    ~/Documents
 D	    ~/Downloads
-miso    ~/gdrive/programming/discord-bots/miso-bot
-p       ~/gdrive/programming
+miso    ~/nextcloud/code/discord-bots/miso-bot
+nc      ~/nextcloud
 cf      ~/.config
 b       ~/bin
 ss      ~/screenshots

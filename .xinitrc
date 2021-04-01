@@ -2,8 +2,6 @@
 
 # runs on X init
 
-echo "$(date --rfc-3339=seconds) $0 - .xinitrc" >> ~/.startup.log
-
 # tiling wm fix for java programs like matlab
 #export _JAVA_AWT_WM_NONREPARENTING=1
 
@@ -15,6 +13,9 @@ xset r rate 300 50
 
 # disable bell
 xset -b
+
+# source Xresources
+xrdb ~/.Xresources
 
 # run X scripts set in etc if any are present
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
@@ -29,7 +30,11 @@ fi
 
 # start programs
 dunst &
-picom &
 sxhkd &
+udiskie &
+transmission-daemon
+dwmblocks &
 
-exec bspwm
+while true; do
+  dwm 2> ~/.dwm.log
+done

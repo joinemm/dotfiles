@@ -5,4 +5,4 @@
 
 selectedcolor="$(xcolor | tr -d '[:space:]' | tr -d '#')"
 printf "$selectedcolor" | xclip -selection clipboard
-notify-send "Color picked" "$selectedcolor"
+notify-send "Color picked" "#$selectedcolor"

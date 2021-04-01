@@ -9,20 +9,20 @@ SAVEHIST=10000
 setopt APPEND_HISTORY
 
 autoload -U compinit
-zstyle ':completion:*' menu select
+zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 compinit
 _comp_options+=(globdots) # include hidden files
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/joinemm/.oh-my-zsh"
+# export ZSH="/home/joinemm/.oh-my-zsh"
 
 # PURE prompt
-fpath+=$HOME/.oh-my-zsh/custom/pure
-autoload -U promptinit; promptinit
-zstyle :prompt:pure:path color yellow
-zstyle :prompt:pure:prompt:success color blue
-zstyle :prompt:pure:prompt:error color red
-prompt pure
+#fpath+=$HOME/.oh-my-zsh/custom/pure
+#autoload -U promptinit; promptinit
+#zstyle :prompt:pure:path color yellow
+#zstyle :prompt:pure:prompt:success color blue
+#zstyle :prompt:pure:prompt:error color red
+#prompt pure
 
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME=""
@@ -53,8 +53,8 @@ DISABLE_AUTO_UPDATE="true"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-DISABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
+#DISABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -62,7 +62,7 @@ COMPLETION_WAITING_DOTS="true"
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-DISABLE_UNTRACKED_FILES_DIRTY="true"
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -80,9 +80,9 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+# plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # User configuration
 unsetopt correct
@@ -99,7 +99,9 @@ export ARCHFLAGS="-arch x86_64"
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 
 # source command not found hook
-source /usr/share/doc/find-the-command/ftc.zsh
+# source /usr/share/doc/find-the-command/ftc.zsh
 
 # Load zsh-syntax-highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh #2>/dev/null
+
+eval "$(starship init zsh)"

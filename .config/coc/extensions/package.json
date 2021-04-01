@@ -1,11 +1,11 @@
 {
   "dependencies": {
-    "coc-css": ">=1.2.4",
+    "coc-css": ">=1.2.6",
     "coc-html": ">=1.2.4",
     "coc-json": ">=1.2.6",
     "coc-omnisharp": ">=0.0.26",
     "coc-python": ">=1.2.12",
-    "coc-snippets": ">=2.1.28",
-    "coc-sql": ">=0.2.25"
+    "coc-snippets": ">=2.2.3",
+    "coc-sql": ">=0.3.3"
   }
 }
