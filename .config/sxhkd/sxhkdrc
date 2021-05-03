@@ -1,0 +1,53 @@
+# ~/.config/sxhkd/sxhkdrc
+
+-----------------------
+### launch programs ###
+-----------------------
+
+# browser
+super + w
+	firefox
+
+# file manager
+super + r
+	spacefm
+
+-------------------
+### run scripts ###
+-------------------
+
+# screenshot
+{Print,super + shift + s}
+	screenshot
+
+# toggle keyboard layout between US and FI
+super + o
+	toggle-kb-layout us fi
+
+# color picker
+super + c
+    color
+
+---------------------
+### bspwm / sxhkd ###
+---------------------
+
+# reload sxhkd
+super + alt + r + s
+	pkill -USR1 -x sxhkd
+
+------------------
+### media keys ###
+------------------
+
+XF86Audio{Play,Next,Prev}
+    playerctl {play-pause,next,previous}
+
+XF86Audio{Raise,Lower}Volume
+    audio-control up 1%
+
+XF86AudioMute
+    audio-control mute
+
+super + {comma,period,slash,minus}
+    playerctl {previous,next,play-pause,play-pause}
