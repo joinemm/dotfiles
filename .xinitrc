@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# ~/.xinitrc
+
 TERM=alacritty
 EDITOR=nvim
 
@@ -8,19 +10,19 @@ eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
 
 # set resolution and refresh rate
-monitor-setup
+~/bin/monitor-setup
 
-# remap caps lock to super and set higher repeat rate
+# remap caps lock to super and set higher key repeat rate
 setxkbmap -option caps:super
 xset r rate 300 30
 
-# source X resources
+# source Xresources
 xrdb /home/join/.Xresources
 
 # set wallpaper
 ~/.fehbg
 
-# launch background programs
+# launch background processes
 dunst &
 sxhkd &
 dwmblocks &

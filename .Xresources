@@ -24,9 +24,9 @@ Xcursor.size: 16
 #define nord14 #A3BE8C
 #define nord15 #B48EAD
 
-*.foreground:   nord4
-*.background:   nord0
-*.cursorColor:  nord4
+*.foreground: nord4
+*.background: nord0
+*.cursorColor: nord4
 *fading: 35
 *fadeColor: nord3
 
