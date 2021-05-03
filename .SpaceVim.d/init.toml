@@ -27,6 +27,7 @@
     bootstrap_after = 'custom#after'
     default_indent = 4
     expand_tab = false
+	autocomplete_method = "coc"
 
 # Enable autocomplete layer
 [[layers]]
