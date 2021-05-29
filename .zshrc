@@ -1,5 +1,9 @@
 # ~/.zshrc
 
+if [[ "$ZPROF" = true ]]; then
+  zmodload zsh/zprof
+fi
+
 path+=$HOME/bin
 path+=$HOME/.local/bin
 path+=$HOME/.yarn/bin
@@ -31,6 +35,10 @@ source $ZSH/oh-my-zsh.sh
 
 # aliases
 source ~/.config/aliases
+
+if [[ "$ZPROF" = true ]]; then
+  zprof
+fi
 
 # prompt
 eval "$(starship init zsh)"
