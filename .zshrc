@@ -19,13 +19,17 @@ setopt autocd extendedglob
 # oh-my-zsh
 ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=$HOME/.config/zsh-custom
+ZSH_DISABLE_COMPFIX="true"
 DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
+ZSH_AUTOSUGGEST_USE_ASYNC="true"
+ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd history completion)
 
 plugins=(
 	emoji
 	command-not-found
+	# fastcomp
 	zsh-z # https://github.com/agkozak/zsh-z
 	zsh-autosuggestions # https://github.com/zsh-users/zsh-autosuggestions
 	zsh-vi-mode # https://github.com/jeffreytse/zsh-vi-mode

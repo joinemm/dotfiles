@@ -1,13 +1,13 @@
 #!/bin/sh
 
-TERM=alacritty
-EDITOR=nvim
+export TERM=alacritty
+export EDITOR=nvim
 
 # set higher key repeat rate
 xset r rate 300 30
 
 # source Xresources
-xrdb /home/join/.Xresources
+xrdb ~/.Xresources
 
 # set wallpaper
 ~/.fehbg

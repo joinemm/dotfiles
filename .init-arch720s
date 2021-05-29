@@ -1,0 +1,2 @@
+WINIT_X11_SCALE_FACTOR=1
+setxkbmap -option caps:super
