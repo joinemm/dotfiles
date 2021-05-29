@@ -47,3 +47,8 @@ Xcursor.size: 16
 *.color14: nord7
 *.color15: nord6
 
+! dwm
+*.gappih: 10
+*.gappiv: 10
+*.gappoh: 30
+*.gappov: 30

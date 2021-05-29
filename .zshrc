@@ -20,9 +20,11 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 plugins=(
 	emoji
+	command-not-found
 	zsh-z # https://github.com/agkozak/zsh-z
 	zsh-autosuggestions # https://github.com/zsh-users/zsh-autosuggestions
 	zsh-vi-mode # https://github.com/jeffreytse/zsh-vi-mode
+	zsh-syntax-highlighting # https://github.com/zsh-users/zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh

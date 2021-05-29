@@ -5,10 +5,6 @@
 TERM=alacritty
 EDITOR=nvim
 
-# set up keyring for authentication
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
-export SSH_AUTH_SOCK
-
 # set resolution and refresh rate
 ~/bin/monitor-setup
 
@@ -24,7 +20,7 @@ xrdb /home/join/.Xresources
 
 # launch background processes
 dunst &
-sxhkd &
+#sxhkd &
 dwmblocks &
 transmission-daemon
 flameshot &
