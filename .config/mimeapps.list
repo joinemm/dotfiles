@@ -19,6 +19,7 @@ application/xhtml+xml=firefox.desktop;
 application/x-extension-xhtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
 video/x-matroska=mpv.desktop;
+image/x-sony-arw=darktable.desktop;
 
 [Removed Associations]
 
@@ -37,3 +38,4 @@ application/xhtml+xml=firefox.desktop
 application/x-extension-xhtml=firefox.desktop
 application/x-extension-xht=firefox.desktop
 video/x-matroska=mpv.desktop
+image/x-sony-arw=darktable.desktop

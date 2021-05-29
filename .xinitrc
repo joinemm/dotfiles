@@ -34,6 +34,7 @@ sxhkd &
 udiskie &
 transmission-daemon
 dwmblocks &
+batsignal -b
 
 while true; do
   dwm 2> ~/.dwm.log

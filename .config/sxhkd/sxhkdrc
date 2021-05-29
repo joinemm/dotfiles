@@ -52,6 +52,9 @@ super + c
 super + z
     xdg-open $(xclip -o)
 
+super + b
+    bt
+
 ---------------------
 ### bspwm / sxhkd ###
 ---------------------
@@ -122,7 +125,7 @@ XF86AudioMute
     audio-control mute
 
 XF86MonBrightness{Up,Down}
-    sudo light -{A,U} 10
+    sudo light -{A,U} 10; pkill -RTMIN+11 dwmblocks
 
 super + {comma,period,slash,minus}
     playerctl {previous,next,play-pause,play-pause}
