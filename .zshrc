@@ -17,7 +17,8 @@ SAVEHIST=10000
 setopt autocd extendedglob
 
 # oh-my-zsh
-export ZSH="/home/join/.oh-my-zsh"
+ZSH=$HOME/.oh-my-zsh
+ZSH_CUSTOM=$HOME/.config/zsh-custom
 DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
