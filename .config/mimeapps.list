@@ -1,0 +1,34 @@
+[Added Associations]
+x-scheme-handler/magnet=transmission-magnet.desktop
+image/jpeg=imv.desktop;sxiv.desktop;
+image/png=imv.desktop;sxiv.desktop;
+video/webm=mpv.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-AOOW00.desktop;
+message/rfc822=userapp-Thunderbird-AOOW00.desktop;
+text/plain=nvim.desktop;
+application/pdf=zathura.desktop;
+image/gif=sxiv.desktop;
+image/x-sony-arw=darktable.desktop
+video/x-matroska=mpv.desktop;
+x-scheme-handler/http=firefox.desktop;
+x-scheme-handler/https=firefox.desktop;
+x-scheme-handler/ftp=firefox.desktop;
+x-scheme-handler/chrome=firefox.desktop;
+
+[Default Applications]
+image/gif=sxiv.desktop;
+application/pdf=zathura.desktop;
+x-scheme-handler/magnet=transmission-magnet.desktop
+x-scheme-handler/msteams=teams.desktop
+image/jpeg=sxiv.desktop;
+image/png=sxiv.desktop;
+video/webm=mpv.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-AOOW00.desktop
+message/rfc822=userapp-Thunderbird-AOOW00.desktop
+text/plain=nvim.desktop;
+x-scheme-handler/http=firefox.desktop;
+x-scheme-handler/https=firefox.desktop;
+x-scheme-handler/ftp=firefox.desktop;
+x-scheme-handler/chrome=firefox.desktop;
+video/x-matroska=mpv.desktop
+image/x-sony-arw=darktable.desktop
