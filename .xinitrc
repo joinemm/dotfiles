@@ -26,6 +26,11 @@ transmission-daemon
 flameshot &
 /opt/activitywatch/start.sh &
 
+# run hostname specific config
+if [ -f ~/.init-$HOST ]; then
+	source ~/.init-$HOST
+fi
+
 # run dwm in a loop
 while true; do
 	dwm 2> ~/.dwm.log
