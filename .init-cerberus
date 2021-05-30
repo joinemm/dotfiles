@@ -1,2 +1,4 @@
-WINIT_X11_SCALE_FACTOR=1
+#!/bin/sh
+export WINIT_X11_SCALE_FACTOR=1
+xrdb -merge ~/.Xresources-nord
 xrandr --output DisplayPort-0 --primary --mode 3440x1440 --rate 144 --rotate normal --output DisplayPort-1 --mode 2560x1440 --rate 144 --left-of DisplayPort-0 --rotate right

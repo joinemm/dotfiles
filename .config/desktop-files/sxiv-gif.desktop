@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=sxiv
+GenericName=Image Viewer
+Exec=sxiv -a %F
+MimeType=image/gif
+Icon=sxiv
+NoDisplay=true
