@@ -9,9 +9,6 @@ xset r rate 300 30
 # source Xresources
 [[ -f ~/.Xresources ]] && xrdb ~/.Xresources
 
-# set wallpaper
-~/.fehbg
-
 # launch background processes
 dunst &
 dwmblocks &
@@ -23,6 +20,9 @@ flameshot &
 # the automatic $HOST env variable is not set by zsh at this point yet
 HOST="$(hostname)"
 [[ -f ~/.init-$HOST ]] && . ~/.init-$HOST
+
+# set wallpaper
+~/.fehbg
 
 # run dwm in a loop
 while true; do
