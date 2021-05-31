@@ -1,7 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Name=sxiv
-Exec=sxiv -a %F
-MimeType=image/gif
-Icon=exec
-NoDisplay=true

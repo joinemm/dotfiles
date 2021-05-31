@@ -1,4 +1,5 @@
 #!/bin/sh
 export WINIT_X11_SCALE_FACTOR=1
 xrdb -merge ~/.Xresources-gruvbox-dark
+batsignal -b
 setxkbmap -option caps:super
