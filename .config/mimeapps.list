@@ -1,12 +1,12 @@
 [Added Associations]
 x-scheme-handler/magnet=transmission-magnet.desktop
-image/jpeg=imv.desktop;sxiv.desktop;
+image/jpeg=sxiv.desktop;imv.desktop;
 image/png=imv.desktop;sxiv.desktop;
 video/webm=mpv.desktop;
 x-scheme-handler/mailto=userapp-Thunderbird-AOOW00.desktop;
 message/rfc822=userapp-Thunderbird-AOOW00.desktop;
 text/plain=nvim.desktop;
-application/pdf=zathura.desktop;
+application/pdf=firefox.desktop;zathura.desktop;
 image/gif=sxiv.desktop;
 image/x-sony-arw=darktable.desktop
 video/x-matroska=mpv.desktop;

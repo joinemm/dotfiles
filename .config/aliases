@@ -30,3 +30,6 @@ alias shutdown="shutdown now"
 alias please='sudo $(fc -ln -1)'
 
 alias tb="nc termbin.com 9999 | tee /dev/tty | xclip -selection c"
+
+alias docker="sudo docker"
+alias docker-compose="sudo docker-compose"
