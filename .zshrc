@@ -24,19 +24,18 @@ DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 ZSH_AUTOSUGGEST_USE_ASYNC="true"
-ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd history completion)
+ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd completion history)
 
 plugins=(
 	emoji
 	command-not-found
-	# fastcomp
 	zsh-z # https://github.com/agkozak/zsh-z
 	zsh-autosuggestions # https://github.com/zsh-users/zsh-autosuggestions
 	zsh-vi-mode # https://github.com/jeffreytse/zsh-vi-mode
 	zsh-syntax-highlighting # https://github.com/zsh-users/zsh-syntax-highlighting
 )
 
-### Fix slowness of pastes with zsh-syntax-highlighting.zsh
+# Fix slowness of pastes with zsh-syntax-highlighting.zsh
 pasteinit() {
   OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
   zle -N self-insert url-quote-magic # I wonder if you'd need `.url-quote-magic`?
@@ -47,9 +46,13 @@ pastefinish() {
 }
 zstyle :bracketed-paste-magic paste-init pasteinit
 zstyle :bracketed-paste-magic paste-finish pastefinish
-### Fix slowness of pastes
 
+# use oh-my-zsh
 source $ZSH/oh-my-zsh.sh
+
+# bind up and down arrows to search through history with the current input
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
 
 # aliases
 source ~/.config/aliases
