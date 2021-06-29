@@ -1,7 +1,11 @@
 #!/bin/sh
-
+export PATH=$PATH:~/bin
 export TERM=alacritty
 export EDITOR=nvim
+
+# turn off system beep
+xset b off
+xset b 0 0 0
 
 # set higher key repeat rate
 xset r rate 300 30
@@ -11,7 +15,7 @@ xset r rate 300 30
 
 # launch background processes
 dunst &
-dwmblocks &
+dwmblocks & 2> ~/.dwmblocks.log
 transmission-daemon
 flameshot &
 [[ -f /opt/activitywatch/start.sh ]] && /opt/activitywatch/start.sh &
