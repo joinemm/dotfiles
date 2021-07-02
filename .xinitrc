@@ -1,5 +1,5 @@
 #!/bin/sh
-export PATH=$PATH:~/bin
+export PATH=$PATH:~/bin:~/bin/status
 export TERM=alacritty
 export EDITOR=nvim
 
@@ -14,8 +14,7 @@ xset r rate 300 30
 [[ -f ~/.Xresources ]] && xrdb ~/.Xresources
 
 # launch background processes
-dunst &
-dwmblocks & 2> ~/.dwmblocks.log
+dwmblocks &
 transmission-daemon
 flameshot &
 [[ -f /opt/activitywatch/start.sh ]] && /opt/activitywatch/start.sh &
