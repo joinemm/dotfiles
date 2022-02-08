@@ -8,6 +8,7 @@ path+=$HOME/bin
 path+=$HOME/.local/bin
 path+=$HOME/.yarn/bin
 path+=$HOME/.poetry/bin
+path+=$HOME/.cargo/bin
 export PATH
 
 HISTFILE=~/.histfile
@@ -24,15 +25,16 @@ DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 ZSH_AUTOSUGGEST_USE_ASYNC="true"
-ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd completion history)
+ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd history completion)
 
 plugins=(
-	emoji
 	command-not-found
-	zsh-z # https://github.com/agkozak/zsh-z
-	zsh-autosuggestions # https://github.com/zsh-users/zsh-autosuggestions
-	zsh-vi-mode # https://github.com/jeffreytse/zsh-vi-mode
-	zsh-syntax-highlighting # https://github.com/zsh-users/zsh-syntax-highlighting
+	zsh-autosuggestions 
+	zsh-vi-mode 
+	zsh-syntax-highlighting 
+	history-substring-search
+	docker
+	docker-compose
 )
 
 # Fix slowness of pastes with zsh-syntax-highlighting.zsh
@@ -47,12 +49,14 @@ pastefinish() {
 zstyle :bracketed-paste-magic paste-init pasteinit
 zstyle :bracketed-paste-magic paste-finish pastefinish
 
+# bind up and down arrows to search through history with the current input
+bindkey "^[[A" history-substring-search-up
+bindkey "^[[B" history-substring-search-down
+zle -N history-substring-search-up
+zle -N history-substring-search-down
+
 # use oh-my-zsh
 source $ZSH/oh-my-zsh.sh
-
-# bind up and down arrows to search through history with the current input
-bindkey "^[[A" history-beginning-search-backward
-bindkey "^[[B" history-beginning-search-forward
 
 # aliases
 source ~/.config/aliases

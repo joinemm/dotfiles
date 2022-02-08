@@ -1,14 +1,53 @@
-//----------------------
-// Configuration
-//----------------------
-
 configuration {
-	modi:				"drun,run";
-	width:				650;
-	lines:				13;
-	font:				"monospace 11";
-	show-match: 		false;
-	separator-style: 	"solid";
-	hide-scrollbar:		true;
-	theme:				"~/.config/rofi/nord";
+  display-window: "";
+  display-drun: "";
+  display-combi: "";
+  font: "Monospace 11";
+  modi: "drun";
+  drun-display-format: "{name}";
+  window-format: "{t}";
+  show-match: true;
+  show-icons: true; 
+}
+// Clear the default theme.
+@theme "nord.rasi"
+
+* {
+  text-selected: #ffffff;
+  text-unselected: #626469;
+
+  background-color: #272a34;
+}
+
+element-icon {
+  size: 20;
+}
+
+element {
+  padding: 10;
+  text-color: @text-unselected;
+}
+
+element selected {
+  text-color: @text-selected;
+}
+
+entry {
+  padding: 10 0 0 10;
+  text-color: @text-selected;
+}
+
+listview {
+  lines: 12;
+}
+
+textbox {
+  padding: 10 10 10 10;
+  text-color: @text-selected;
+}
+
+element-icon, element-text {
+  background-color: inherit;
+  text-color: inherit;
+  highlight: none;
 }
