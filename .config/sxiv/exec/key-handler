@@ -1,0 +1,9 @@
+#!/bin/sh
+case "$1" in
+"d")	while read file; do mv "$file" ~/.trash; done ;;
+"r")	convert -rotate 90 "$file" "$file" ;;
+"R")	convert -rotate -90 "$file" "$file" ;;
+"c")	xclip -selection clipboard -t image/png "$file" ;;
+"C")	dropclick $(cat $file | tr '\n' ' ');;
+"w")	setbg "$file" ;;
+esac

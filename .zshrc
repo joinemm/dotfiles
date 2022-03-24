@@ -12,8 +12,8 @@ path+=$HOME/.cargo/bin
 export PATH
 
 HISTFILE=~/.histfile
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=1000000
+SAVEHIST=1000000
 
 setopt autocd extendedglob
 
@@ -31,13 +31,13 @@ plugins=(
 	command-not-found
 	zsh-autosuggestions 
 	zsh-vi-mode 
-	zsh-syntax-highlighting 
+	fast-syntax-highlighting 
 	history-substring-search
 	docker
 	docker-compose
 )
 
-# Fix slowness of pastes with zsh-syntax-highlighting.zsh
+# Fix slowness of pastes with syntax highlighting
 pasteinit() {
   OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
   zle -N self-insert url-quote-magic # I wonder if you'd need `.url-quote-magic`?
@@ -49,14 +49,29 @@ pastefinish() {
 zstyle :bracketed-paste-magic paste-init pasteinit
 zstyle :bracketed-paste-magic paste-finish pastefinish
 
+# use oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
+# Use lf to switch directories and bind it to ctrl-o
+lfcd () {
+    tmp="$(mktemp)"
+    lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp" >/dev/null
+        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
+    fi
+}
 # bind up and down arrows to search through history with the current input
 bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
 zle -N history-substring-search-up
 zle -N history-substring-search-down
 
-# use oh-my-zsh
-source $ZSH/oh-my-zsh.sh
+bindkey -s '^o' 'lfcd\n'
+bindkey -s '^a' 'bc -lq\n'
+bindkey -r '^f'
+bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
 
 # aliases
 source ~/.config/aliases
