@@ -1,0 +1,18 @@
+[submodule ".config/zsh-custom/plugins/zsh-z"]
+	path = .config/zsh-custom/plugins/zsh-z
+	url = https://github.com/agkozak/zsh-z
+[submodule ".config/zsh-custom/plugins/fast-syntax-highlighting"]
+	path = .config/zsh-custom/plugins/fast-syntax-highlighting
+	url = https://github.com/zdharma-continuum/fast-syntax-highlighting.git
+[submodule ".config/zsh-custom/plugins/zsh-vi-mode"]
+	path = .config/zsh-custom/plugins/zsh-vi-mode
+	url = https://github.com/jeffreytse/zsh-vi-mode
+[submodule ".config/zsh-custom/plugins/zsh-autosuggestions"]
+	path = .config/zsh-custom/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule ".config/dwm"]
+	path = .config/dwm
+	url = git@github.com:joinemm/dwm.git
+[submodule ".config/dwmblocks"]
+	path = .config/dwmblocks
+	url = git@github.com:joinemm/dwmblocks.git
