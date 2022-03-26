@@ -30,11 +30,11 @@ ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd history completion)
 plugins=(
 	command-not-found
 	zsh-autosuggestions 
-	zsh-vi-mode 
 	fast-syntax-highlighting 
 	history-substring-search
 	docker
 	docker-compose
+	fzf
 )
 
 # Fix slowness of pastes with syntax highlighting
