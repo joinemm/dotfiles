@@ -35,3 +35,5 @@ alias docker="sudo docker"
 alias docker-compose="sudo docker-compose"
 
 alias lf="lfub"
+
+alias emoji="rofimoji -a print | tr -d '\n' | xclip -selection clipboard"

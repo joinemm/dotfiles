@@ -50,5 +50,5 @@ Xcursor.size: 16
 ! dwm
 *.gappih: 10
 *.gappiv: 10
-*.gappoh: 30
-*.gappov: 30
+*.gappoh: 15
+*.gappov: 15

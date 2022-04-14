@@ -17,6 +17,7 @@ xset r rate 300 30
 dwmblocks &
 transmission-daemon
 flameshot &
+redshift &
 [[ -f /opt/activitywatch/start.sh ]] && /opt/activitywatch/start.sh &
 
 # run hostname specific config
@@ -37,6 +38,9 @@ export SSH_AUTH_SOCK
 mkdir -p "$HOME"/.local/share/keyrings
 
 source ~/.config/lf/icons
+
+# fix java programs
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 # run dwm in a loop
 while true; do

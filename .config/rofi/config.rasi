@@ -12,6 +12,10 @@ configuration {
 // Clear the default theme.
 @theme "nord.rasi"
 
+window {
+	width: 720;
+}
+
 * {
   text-selected: #ffffff;
   text-unselected: #626469;
