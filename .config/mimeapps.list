@@ -1,7 +1,7 @@
 [Added Associations]
 x-scheme-handler/magnet=transmission-magnet.desktop
 image/jpeg=imv.desktop;sxiv.desktop;
-image/png=imv.desktop;sxiv.desktop;
+image/png=gimp.desktop;imv.desktop;sxiv.desktop;
 video/webm=mpv.desktop;
 x-scheme-handler/mailto=userapp-Thunderbird-AOOW00.desktop;userapp-Thunderbird-LEM330.desktop;
 message/rfc822=userapp-Thunderbird-AOOW00.desktop;userapp-Thunderbird-LEM330.desktop;
