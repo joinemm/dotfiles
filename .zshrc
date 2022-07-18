@@ -29,8 +29,8 @@ ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd history completion)
 
 plugins=(
 	command-not-found
-	zsh-autosuggestions 
-	fast-syntax-highlighting 
+	zsh-autosuggestions
+	fast-syntax-highlighting
 	history-substring-search
 	docker
 	docker-compose
@@ -80,9 +80,10 @@ if [[ "$ZPROF" = true ]]; then
   zprof
 fi
 
-# prompt
-eval "$(starship init zsh)"
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# prompt
+prompt off
+eval "$(starship init zsh)"
