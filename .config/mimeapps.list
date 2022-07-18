@@ -14,7 +14,7 @@ x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
 x-scheme-handler/ftp=firefox.desktop;
 x-scheme-handler/chrome=firefox.desktop;
-video/mp4=vlc.desktop;
+video/mp4=mpv.desktop;vlc.desktop;
 text/html=firefox.desktop;
 
 [Default Applications]
@@ -35,3 +35,5 @@ x-scheme-handler/chrome=firefox.desktop;
 video/x-matroska=mpv.desktop
 image/x-sony-arw=darktable.desktop
 inode/directory=spacefm.desktop
+x-scheme-handler/webcal=google-chrome.desktop
+video/mp4=mpv.desktop;
