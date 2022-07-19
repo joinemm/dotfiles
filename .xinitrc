@@ -3,6 +3,9 @@ export PATH=$PATH:~/bin:~/bin/status
 export TERM=alacritty
 export EDITOR=nvim
 
+SUDO_ASKPASS=$HOME/bin/rofi-askpass
+SSH_ASKPASS=$HOME/bin/rofi-askpass
+
 # turn off system beep
 xset b off
 xset b 0 0 0
@@ -22,8 +25,8 @@ redshift &
 
 # run hostname specific config
 # the automatic $HOST env variable is not set by zsh at this point yet
-HOST="$(hostname)"
-[[ -f ~/.init-$HOST ]] && . ~/.init-$HOST
+export HOSTNAME=$(cat /etc/hostname)
+[[ -f ~/.init-$HOSTNAME ]] && . ~/.init-$HOSTNAME
 
 # set wallpaper
 ~/.fehbg
