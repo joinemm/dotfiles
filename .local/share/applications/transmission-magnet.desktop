@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Transmission-remote add
+Comment=Add a torrent to the transmission daemon
+Exec=/home/join/bin/add-torrent %u
+MimeType=x-scheme-handler/magnet;
