@@ -51,6 +51,9 @@ zstyle :bracketed-paste-magic paste-finish pastefinish
 # use oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
+# find missing commands
+source /usr/share/doc/find-the-command/ftc.zsh noprompt info
+
 # Use lf to switch directories and bind it to ctrl-o
 lfcd () {
     tmp="$(mktemp)"

@@ -3,8 +3,9 @@ export PATH=$PATH:~/bin:~/bin/status
 export TERM=alacritty
 export EDITOR=nvim
 
-SUDO_ASKPASS=$HOME/bin/rofi-askpass
-SSH_ASKPASS=$HOME/bin/rofi-askpass
+# use rofi to ask for password
+export SUDO_ASKPASS=$HOME/bin/rofi-askpass
+export SSH_ASKPASS=$HOME/bin/rofi-askpass
 
 # turn off system beep
 xset b off

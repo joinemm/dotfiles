@@ -48,7 +48,5 @@ Xcursor.size: 16
 *.color15: nord6
 
 ! dwm
-*.gappih: 10
-*.gappiv: 10
-*.gappoh: 15
-*.gappov: 15
+*.selbordercolor: nord8
+*.bordercolor: nord0

@@ -2,12 +2,12 @@ configuration {
   display-window: "";
   display-drun: "";
   display-combi: "";
-  font: "Monospace 11";
+  font: "monospace 12";
   modi: "drun";
   drun-display-format: "{name}";
   window-format: "{t}";
   show-match: true;
-  show-icons: true; 
+  show-icons: true;
 }
 // Clear the default theme.
 @theme "nord.rasi"
