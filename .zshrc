@@ -28,7 +28,6 @@ ZSH_AUTOSUGGEST_USE_ASYNC="true"
 ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd history completion)
 
 plugins=(
-	command-not-found
 	zsh-autosuggestions
 	fast-syntax-highlighting
 	history-substring-search
@@ -85,5 +84,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # prompt
-#prompt off
+if [ "$(command -v prompt)" ]; then
+    prompt off
+fi
 eval "$(starship init zsh)"
