@@ -1,9 +1,10 @@
 #!/bin/sh
 case "$1" in
 "d")	while read file; do mv "$file" ~/.trash; done ;;
-"r")	convert -rotate 90 "$file" "$file" ;;
-"R")	convert -rotate -90 "$file" "$file" ;;
-"c")	xclip -selection clipboard -t image/png "$file" ;;
-"C")	dropclick $(cat $file | tr '\n' ' ');;
-"w")	setbg "$file" ;;
+"r")	while read file; do convert -rotate 90 "$file" "$file"; done ;;
+"R")	while read file; do convert -rotate -90 "$file" "$file"; done ;;
+"c")	while read file; do xclip -selection clipboard -t image/png "$file"; done ;;
+"C")	while read file; do dropclick $(cat $file | tr '\n' ' '); done ;;
+"w")	while read file; do setbg "$file"; done ;;
+"b")	while read file; do setbg "$file"; done ;;
 esac

@@ -21,6 +21,7 @@ xset r rate 300 30
 dwmblocks &
 transmission-daemon
 flameshot &
+dunst &
 redshift &
 picom --experimental-backend -b
 [[ -f /opt/activitywatch/start.sh ]] && /opt/activitywatch/start.sh &

@@ -48,5 +48,6 @@ Xcursor.size: 16
 *.color15: nord6
 
 ! dwm
-*.selbordercolor: nord8
+*.selbordercolor: nord10
 *.bordercolor: nord0
+*.selbgcolor: nord10

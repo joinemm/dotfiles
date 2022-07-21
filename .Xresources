@@ -1,6 +1,6 @@
 Xft.dpi: 96
 Sxiv.font: monospace
-*.gappih: 10
-*.gappiv: 10
+*.gappih: 15
+*.gappiv: 15
 *.gappoh: 15
 *.gappov: 15
