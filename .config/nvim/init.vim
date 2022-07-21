@@ -23,7 +23,7 @@ set mouse=a
 let mapleader = " "
 
 " create undodir if it doesnt exist
-silent !mkdir -p "~/.vim/undo" > /dev/null 2>&1
+silent !mkdir -p ~/.vim/undo > /dev/null 2>&1
 set undodir=~/.vim/undo
 set undofile
 set shadafile=~/.vim/viminfo
