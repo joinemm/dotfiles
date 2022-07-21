@@ -10,9 +10,3 @@
 [submodule ".config/zsh-custom/plugins/zsh-autosuggestions"]
 	path = .config/zsh-custom/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
-[submodule ".config/dwm"]
-	path = .config/dwm
-	url = git@github.com:joinemm/dwm.git
-[submodule ".config/dwmblocks"]
-	path = .config/dwmblocks
-	url = git@github.com:joinemm/dwmblocks.git
