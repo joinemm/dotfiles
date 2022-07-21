@@ -1,7 +1,4 @@
 {
-  "BACKGROUND_COLOR": "#202225",
-  "IS_MAXIMIZED": false,
-  "IS_MINIMIZED": false,
   "OPEN_ON_STARTUP": false,
   "MIN_WIDTH": 100,
   "MIN_HEIGHT": 100,
