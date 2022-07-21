@@ -4,11 +4,11 @@ My Arch Linux configuration, managed with `yadm`
 
 For a complete system you need to clone and build my forks of
 
-`dwm`: https://github.com/joinemm/dwm\
-`dwmblocks`: https://github.com/joinemm/dwmblocks\
-`picom`: https://github.com/joinemm/picom\
+`dwm`: https://github.com/joinemm/dwm \
+`dwmblocks`: https://github.com/joinemm/dwmblocks \
+`picom`: https://github.com/joinemm/picom
 
-And clone my bash scripts into `~/bin`
+And clone my bash scripts into `~/bin` (or anywhere in $PATH)
 
 https://github.com/joinemm/bin
 
@@ -31,4 +31,4 @@ PDF viewer: `zathura`\
 Torrent manager: `stig`\
 AUR helper: `paru`\
 Screenshot tool: `flameshot`\
-Screencast tool: `ffcast`\
+Screencast tool: `ffcast`
