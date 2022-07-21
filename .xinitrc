@@ -22,6 +22,7 @@ dwmblocks &
 transmission-daemon
 flameshot &
 redshift &
+picom --experimental-backend -b
 [[ -f /opt/activitywatch/start.sh ]] && /opt/activitywatch/start.sh &
 
 # run hostname specific config
@@ -41,9 +42,10 @@ export SSH_AUTH_SOCK
 # see https://github.com/NixOS/nixpkgs/issues/14966#issuecomment-520083836
 mkdir -p "$HOME"/.local/share/keyrings
 
+# icons for lf file manager
 source ~/.config/lf/icons
 
-# fix java programs
+# fix java programs in tiling window managers
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 # run dwm in a loop
