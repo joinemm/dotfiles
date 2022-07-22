@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# set the default key repeat rate
+# fixes the issue where plugging in another keyboard would reset the value
+# equivalent to: xset r rate 300 40
+exec /usr/bin/X -nolisten tcp -ardelay 300 -arinterval 25 "$@"
