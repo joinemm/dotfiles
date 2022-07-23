@@ -3,7 +3,7 @@
 # File preview handler for lf.
 
 # Required software:
-# ueberzug mediainfo lynx bat atool ffmpegthumbnailer pdftoppm odt2txt 
+# ueberzug mediainfo lynx bat atool ffmpegthumbnailer pdftoppm odt2txt
 
 set -C -f
 IFS="$(printf '%b_' '\n')"; IFS="${IFS%_}"
@@ -41,7 +41,7 @@ case "$(file --dereference --brief --mime-type -- "$1")" in
 		[ ! -f "$CACHE.jpg" ] && pdftoppm -jpeg -f 1 -singlefile "$1" "$CACHE"
 		image "$CACHE.jpg" "$2" "$3" "$4" "$5"
 		;;
-        *opendocument*) odt2txt "$1" ;;
+    *opendocument*) odt2txt "$1" ;;
 	application/pgp-encrypted) gpg -d -- "$1" ;;
 esac
 exit 1

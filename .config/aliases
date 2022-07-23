@@ -14,7 +14,7 @@ alias pac="sudo pacman"
 alias grep='grep --color=auto'
 
 alias ls="ls --color=auto"
-alias ll="ls -la"
+alias l="ls -la"
 
 alias mkdir="mkdir -pv"
 alias mount='mount |column -t'
