@@ -1,53 +1,57 @@
 configuration {
-  display-window: "";
-  display-drun: "";
-  display-combi: "";
-  font: "monospace 12";
-  modi: "drun";
+  font: "monospace 13";
   drun-display-format: "{name}";
   window-format: "{t}";
   show-match: true;
+  icon-theme: "Qogir";
   show-icons: true;
+
+  drun {
+    display-name: "  ";
+  }
+
+  run {
+    display-name: "  ";
+  }
+
+  window {
+    display-name: "  ";
+  }
 }
-// Clear the default theme.
+
 @theme "nord.rasi"
 
 window {
 	width: 720;
 }
 
-* {
-  text-selected: #ffffff;
-  text-unselected: #626469;
-
-  background-color: #272a34;
+mainbox {
+  border: 0;
+  padding: 10;
 }
 
 element-icon {
-  size: 20;
+  size: 24;
+  padding: 0 5 0 0;
 }
 
 element {
-  padding: 10;
-  text-color: @text-unselected;
-}
-
-element selected {
-  text-color: @text-selected;
-}
-
-entry {
-  padding: 10 0 0 10;
-  text-color: @text-selected;
+  border-radius: 5px;
+  padding: 7;
 }
 
 listview {
   lines: 12;
+  fixed-height: 0;
+  padding: 5 0 0;
+  spacing: 5px ;
 }
-
 textbox {
   padding: 10 10 10 10;
-  text-color: @text-selected;
+}
+
+inputbar {
+  padding: 5;
 }
 
 element-icon, element-text {
@@ -55,3 +59,5 @@ element-icon, element-text {
   text-color: inherit;
   highlight: none;
 }
+
+/* vim:ft=css

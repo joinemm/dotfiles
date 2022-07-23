@@ -1,0 +1,15 @@
+configuration {
+  show-icons: false;
+}
+
+window {
+  width: 300px;
+}
+
+inputbar {
+  enabled: false;
+}
+
+listview {
+	lines: 3;
+}
