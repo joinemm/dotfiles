@@ -1,18 +1,10 @@
 #!/bin/sh
-export PATH=$PATH:~/bin:~/bin/status
 export TERM=alacritty
 export EDITOR=nvim
-
-# use rofi to ask for password
-export SUDO_ASKPASS=$HOME/bin/rofi-askpass
-export SSH_ASKPASS=$HOME/bin/rofi-askpass
 
 # turn off system beep
 xset b off
 xset b 0 0 0
-
-# set higher key repeat rate
-xset r rate 300 30
 
 # source Xresources
 [[ -f ~/.Xresources ]] && xrdb ~/.Xresources
