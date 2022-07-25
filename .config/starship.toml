@@ -6,3 +6,14 @@ success_symbol = "[🥑 ❯](bold green)"
 error_symbol = "[🍒 ❯](bold red)"
 vicmd_symbol = "[🍇 ❯](bold purple)"
 
+# the battery module is very slow and has a noticeable effect on shell startup time
+[battery]
+disabled = true
+
+# enable git addition and deletion metrics
+[git_metrics]
+disabled = false
+
+# make git repo name stand out
+[directory]
+repo_root_style = "bold underline italic blue"

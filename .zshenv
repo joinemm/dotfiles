@@ -11,3 +11,6 @@ path+=$HOME/.poetry/bin
 path+=$HOME/.cargo/bin
 
 export PATH
+
+# Python Better Exceptions
+export BETTER_EXCEPTIONS=1
