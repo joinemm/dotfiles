@@ -7,15 +7,15 @@ configuration {
   show-icons: true;
 
   drun {
-    display-name: "  ";
+    display-name: " ";
   }
 
   run {
-    display-name: "  ";
+    display-name: " ";
   }
 
   window {
-    display-name: "  ";
+    display-name: " ";
   }
 }
 
@@ -46,12 +46,17 @@ listview {
   padding: 5 0 0;
   spacing: 5px ;
 }
+
 textbox {
   padding: 10 10 10 10;
 }
 
 inputbar {
   padding: 5;
+}
+
+entry {
+  padding: 0 0 0 10;
 }
 
 element-icon, element-text {
