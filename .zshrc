@@ -91,6 +91,7 @@ autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
 # OMZ plugins and libs
+# install pkgfile and run `pkgfile --update` for command-not-found plugin to work
 zinit wait lucid for \
     OMZL::clipboard.zsh \
     OMZL::compfix.zsh \
