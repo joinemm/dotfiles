@@ -51,6 +51,7 @@ call plug#begin()
     Plug 'kyazdani42/nvim-web-devicons' " Icons for statusline
     Plug 'ggandor/lightspeed.nvim' " Move around blazingly fast
     Plug 'folke/which-key.nvim' " Keybind hint menu
+    Plug 'navarasu/onedark.nvim'
 call plug#end()
 
 " Run PlugInstall if there are missing plugins
@@ -63,7 +64,10 @@ let g:nord_contrast = v:true " Make sidebars and popup menus like nvim-tree and 
 let g:nord_borders = v:true " Enable the border between verticaly split windows visible
 let g:nord_italic = v:false " enables/disables italics
 let g:nord_uniform_diff_background = v:true " enables/disables colorful backgrounds when used in diff mode
-colorscheme nord
+let g:onedark_config = {
+    \ 'style': 'darker',
+\}
+colorscheme onedark
 
 " autocmd to trim trailing whitespace on save
 fun! TrimWhitespace()
