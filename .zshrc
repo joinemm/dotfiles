@@ -65,10 +65,11 @@ alias mv="mv -iv"
 alias rm="rm -I"
 alias cp="cp -iv"
 alias ln="ln -iv"
-alias please="sudo $fc -ln -1)"
-alias docker="sudo docker"
-alias docker-compose="sudo docker-compose"
+alias please='sudo $(fc -ln -1)'
+#alias docker="sudo docker"
+#alias docker-compose="sudo docker-compose"
 alias lf="lfub"
+alias gs="git status"
 
 # move around blazingly fast!!
 alias c="cd ~/.config"
