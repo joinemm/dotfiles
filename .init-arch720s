@@ -3,6 +3,7 @@ export WINIT_X11_SCALE_FACTOR=1
 xrdb -merge ~/.Xresources-gruvbox-dark
 batsignal -b
 udiskie &
+redshift &
 setxkbmap -option caps:super
 # enable tap to click
 xinput set-prop 'SYNA2B34:01 06CB:7F8D Touchpad' 'libinput Tapping Enabled' 1
