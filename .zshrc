@@ -194,3 +194,6 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-
 if [[ "$ZPROF" = true ]]; then
   zprof
 fi
+
+# Fix ssh sessions with Alacritty
+TERM=xterm-256color
