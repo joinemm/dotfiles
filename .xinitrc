@@ -19,7 +19,7 @@ dwmblocks &
 transmission-daemon
 flameshot &
 dunst &
-picom --experimental-backend -b
+picom -b
 [[ -f /opt/activitywatch/start.sh ]] && /opt/activitywatch/start.sh &
 
 # set wallpaper

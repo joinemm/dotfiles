@@ -23,7 +23,7 @@ setopt extendedglob         # better globbing
 setopt nocaseglob           # case insensitive glob
 unsetopt notify             # make background jobs actually background
 setopt correct              # autocorrect
-setopt correct_all          # autocorrect more
+setopt nocorrectall         # but only autocorrect the command not arguments
 setopt autocd               # cd to directory without writing cd
 unsetopt bg_nice            # dont run background jobs at lower priority
 unsetopt hup                # keep background jobs running even if shell is killed
@@ -66,10 +66,12 @@ alias rm="rm -I"
 alias cp="cp -iv"
 alias ln="ln -iv"
 alias please='sudo $(fc -ln -1)'
-#alias docker="sudo docker"
-#alias docker-compose="sudo docker-compose"
 alias lf="lfub"
 alias gs="git status"
+
+# config management
+alias dots="yadm"
+alias etcdots="sudo yadm --yadm-dir /etc/yadm --yadm-data /etc/yadm/data"
 
 # move around blazingly fast!!
 alias c="cd ~/.config"
