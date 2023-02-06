@@ -93,12 +93,6 @@ source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
-# check that this shit is downloaded
-if [[ -z $commands[thefuck] ]]; then
-    echo 'thefuck is not installed, you should "pip install thefuck" or "brew install thefuck" first.'
-    echo 'See https://github.com/nvbn/thefuck#installation'
-fi
-
 # OMZ plugins and libs
 # install pkgfile and run `pkgfile --update` for command-not-found plugin to work
 zinit wait lucid for \
@@ -107,7 +101,6 @@ zinit wait lucid for \
     OMZL::correction.zsh \
     OMZL::directories.zsh \
     OMZL::key-bindings.zsh \
-    OMZP::command-not-found \
     OMZP::colored-man-pages
 
 # extra completion
@@ -144,24 +137,18 @@ zinit wait lucid for \
     zdharma/history-search-multi-word \
   as"program" pick"bin/git-dsf" \
     zdharma-continuum/zsh-diff-so-fancy \
-    redxtech/zsh-asdf-direnv \
-    djui/alias-tips \
-  atload"
-  zstyle ':prezto:module:thefuck' alias 'fuck'
-  zstyle ':prezto:module:thefuck' bindkey 'no'
-  zstyle ':prezto:runcom' zpreztorc '${ZDOTDIR:-$HOME}/.zshrc'
-  " \
-    laggardkernel/zsh-thefuck \
-  atload"zstyle ':completion:*' format '%d'" \
-    Aloxaf/fzf-tab
-
-# starship.rs prompt
-zinit ice from"gh-r" as"command" atload'eval "$(starship init zsh)"'
-zinit load starship/starship
+    djui/alias-tips
+  # redxtech/zsh-asdf-direnv \
+  # atload"
+  # zstyle ':prezto:module:thefuck' alias 'fuck'
+  # zstyle ':prezto:module:thefuck' bindkey 'no'
+  # zstyle ':prezto:runcom' zpreztorc '${ZDOTDIR:-$HOME}/.zshrc'
+  # " \
+  #   laggardkernel/zsh-thefuck
+  # atload"zstyle ':completion:*' format '%d'" \
+  #   Aloxaf/fzf-tab
 
 # get nice ls colors
-zinit ice as"command" from"gh-r" mv"*-x86_64-unknown-linux-gnu/vivid -> vivid" bpick"*-x86_64-unknown-linux-gnu.tar.gz" pick"vivid"
-zinit load sharkdp/vivid
 # choose ls color scheme here
 # `vivid themes` to see what's available)
 THEME=snazzy
@@ -199,3 +186,6 @@ fi
 
 # Fix ssh sessions with Alacritty
 TERM=xterm-256color
+
+# starship.rs prompt
+eval "$(starship init zsh)"
