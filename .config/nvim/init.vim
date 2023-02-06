@@ -52,6 +52,8 @@ call plug#begin()
     Plug 'ggandor/lightspeed.nvim' " Move around blazingly fast
     Plug 'folke/which-key.nvim' " Keybind hint menu
     Plug 'navarasu/onedark.nvim'
+    Plug 'LnL7/vim-nix'
+    Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 call plug#end()
 
 " Run PlugInstall if there are missing plugins
@@ -67,7 +69,7 @@ let g:nord_uniform_diff_background = v:true " enables/disables colorful backgrou
 let g:onedark_config = {
     \ 'style': 'darker',
 \}
-colorscheme onedark
+colorscheme tokyonight-night
 
 " autocmd to trim trailing whitespace on save
 fun! TrimWhitespace()
