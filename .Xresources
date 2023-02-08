@@ -4,3 +4,4 @@ Sxiv.font: monospace
 *.gappiv: 15
 *.gappoh: 15
 *.gappov: 15
+*.smartgaps: 0
