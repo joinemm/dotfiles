@@ -16,14 +16,16 @@ x-scheme-handler/ftp=firefox.desktop;
 x-scheme-handler/chrome=firefox.desktop;
 video/mp4=mpv.desktop;vlc.desktop;
 text/html=firefox.desktop;
+inode/directory=spacefm.desktop;
+text/csv=nvim.desktop;
 
 [Default Applications]
-image/gif=sxiv-gif.desktop;
+image/gif=imv.desktop;
 application/pdf=zathura.desktop;
 x-scheme-handler/magnet=transmission-magnet.desktop
 x-scheme-handler/msteams=teams.desktop
-image/jpeg=sxiv.desktop;
-image/png=sxiv.desktop;
+image/jpeg=imv.desktop;
+image/png=imv.desktop;
 video/webm=mpv.desktop;
 x-scheme-handler/mailto=userapp-Thunderbird-LEM330.desktop
 message/rfc822=userapp-Thunderbird-LEM330.desktop
@@ -37,3 +39,4 @@ image/x-sony-arw=darktable.desktop
 inode/directory=spacefm.desktop
 x-scheme-handler/webcal=google-chrome.desktop
 video/mp4=mpv.desktop;
+text/csv=nvim.desktop;
