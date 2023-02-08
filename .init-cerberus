@@ -1,6 +1,6 @@
 #!/bin/sh
 export WINIT_X11_SCALE_FACTOR=1
-xrdb -merge ~/.Xresources-onedark
+xrdb -merge ~/.Xresources-rose-pine
 redshift &
 easyeffects --gapplication-service &
 xrandr --output DisplayPort-0 --primary --mode 3440x1440 --rate 144 --rotate normal
