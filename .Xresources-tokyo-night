@@ -45,6 +45,6 @@
 
 ! dwm
 *.selbordercolor: #7AA2F7
-*.bordercolor: #1A1B26
-*.selbgcolor: #9ECE6A
-
+*.bordercolor: #4E5173 
+*.selbgcolor: #4ABAAF
+*.selfgcolor: #1A1B26
