@@ -14,3 +14,5 @@ export PATH
 
 # Python Better Exceptions
 export BETTER_EXCEPTIONS=1
+
+export BROWSER=firefox
