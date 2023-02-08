@@ -1,5 +1,5 @@
 #!/bin/sh
-export TERM=alacritty
+export TERM=kitty
 export EDITOR=nvim
 
 # turn off system beep
@@ -7,7 +7,7 @@ xset b off
 xset b 0 0 0
 
 # source Xresources
-[[ -f ~/.Xresources ]] && xrdb ~/.Xresources
+xrdb ~/.Xresources
 
 # run hostname specific config
 # the automatic $HOST env variable is not set by zsh at this point yet
@@ -16,14 +16,14 @@ export HOSTNAME=$(cat /etc/hostname)
 
 # launch background processes
 dwmblocks &
-transmission-daemon
 flameshot &
 dunst &
 picom -b
-[[ -f /opt/activitywatch/start.sh ]] && /opt/activitywatch/start.sh &
 
 # set wallpaper
-~/.fehbg
+source ~/.keys
+random-wallpaper
+# ~/.fehbg
 
 # keyring
 # see https://unix.stackexchange.com/a/295652/332452

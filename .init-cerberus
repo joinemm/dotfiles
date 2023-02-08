@@ -1,6 +1,6 @@
 #!/bin/sh
 export WINIT_X11_SCALE_FACTOR=1
-xrdb -merge ~/.Xresources-rose-pine
+xrdb -merge ~/.Xresources-tokyo-night
 redshift &
 transmission-daemon
 easyeffects --gapplication-service &
