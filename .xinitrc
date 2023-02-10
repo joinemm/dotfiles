@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/usr/bin/env bash
+# vim: ft=sh
+
 export TERM=kitty
 export EDITOR=nvim
 
@@ -21,18 +23,23 @@ dunst &
 picom -b
 
 # set wallpaper
-source ~/.keys
-random-wallpaper
-# ~/.fehbg
+if [[ -f ~/.keys ]]; then
+    source ~/.keys
+    random-wallpaper
+else
+    ~/.fehbg
+fi
 
-# keyring
-# see https://unix.stackexchange.com/a/295652/332452
-source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
-# see https://wiki.archlinux.org/title/GNOME/Keyring#xinitrc
-eval $(gnome-keyring-daemon --start)
-export SSH_AUTH_SOCK
-# see https://github.com/NixOS/nixpkgs/issues/14966#issuecomment-520083836
-mkdir -p "$HOME"/.local/share/keyrings
+if [[ "$(uname -a)" == *"Arch"* ]]; then
+    # keyring
+    # see https://unix.stackexchange.com/a/295652/332452
+    source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
+    # see https://wiki.archlinux.org/title/GNOME/Keyring#xinitrc
+    eval $(gnome-keyring-daemon --start)
+    export SSH_AUTH_SOCK
+    # see https://github.com/NixOS/nixpkgs/issues/14966#issuecomment-520083836
+    mkdir -p "$HOME"/.local/share/keyrings
+fi
 
 # icons for lf file manager
 source ~/.config/lf/icons
@@ -42,5 +49,5 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 
 # run dwm in a loop
 while true; do
-	dwm 2> ~/.dwm.log
+    dwm 2>~/.dwm.log
 done
