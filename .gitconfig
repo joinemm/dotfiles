@@ -1,0 +1,8 @@
+[init]
+	defaultBranch = master
+[user]
+	email = joonas@rautiola.co
+	name = Joinemm
+
+[includeIf "gitdir:~/code/tiiuae/"]
+    path = ~/code/tiiuae/.gitconfig_include
