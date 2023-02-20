@@ -1,0 +1,54 @@
+# media folders
+Desktop
+code
+external
+pictures
+downloads
+
+.local/share
+.local/state
+!.local/share/applications
+
+.config/Code
+!.config/Code/User/settings.json
+
+.config/discord
+!.config/discord/rename_to_settings.json
+
+.config/pcmanfm/default
+.config/nextjs-nodejs
+.config/Slack
+.config/bottom
+.config/gtk-*/*.css
+.config/pavucontrol.ini
+.config/pulse/cookie
+.config/spotify
+.config/syncthing
+
+.Xauthority
+.*_history
+.zcompdump
+.wget-hsts
+
+# this folder only has undofiles, viminfo etc
+# real config is in .config/nvim
+.vim
+
+.serverauth.*
+*.log
+.icons
+
+# android aosp
+.repo_.gitconfig.json
+.repoconfig
+
+.mozilla
+.pki
+
+.npm
+.rustup
+.cache
+.cargo
+.compose-cache
+.vscode
+.ssh
