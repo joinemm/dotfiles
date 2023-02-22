@@ -25,6 +25,10 @@
         "--profile",
         "black"
     ],
+    "[markdown]": {
+        "editor.defaultFormatter": "unifiedjs.vscode-remark"
+        "editor.wordWrap": "on"
+    },
     "[rust]": {
         "editor.defaultFormatter": "rust-lang.rust-analyzer"
     },
@@ -35,9 +39,6 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[mdx]": {
-        "editor.wordWrap": "on"
-    },
-    "[markdown]": {
         "editor.wordWrap": "on"
     },
     "debug.allowBreakpointsEverywhere": true,
@@ -77,6 +78,7 @@
     "explorer.confirmDragAndDrop": false,
     "files.eol": "\n",
     "markdown.preview.fontSize": 12,
+    "liveServer.settings.useLocalIp": true,
     "prettier.printWidth": 100,
     "prettier.singleQuote": true,
     "prettier.trailingComma": "all",
@@ -92,6 +94,15 @@
         "--ignore=E203,E503,W503,E501"
     ],
     "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false,
+    "rpc.appName": "Visual Studio Code",
+    "rpc.buttonEnabled": true,
+    "rpc.detailsEditing": "In {workspace} • {git_branch}",
+    "rpc.detailsViewing": "In {workspace} • {git_branch}",
+    "rpc.idleTimeout": 60,
+    "rpc.lowerDetailsEditing": "{dir_name}/{file_name} :{current_line}/{total_lines}",
+    "rpc.lowerDetailsViewing": "{dir_name}/{file_name}",
+    "rust-analyzer.checkOnSave.allTargets": false,
     "settingsSync.ignoredSettings": [
         "editor.fontSize",
         "debug.console.fontSize",
@@ -127,6 +138,7 @@
         "*.ipynb": "jupyter-notebook"
     },
     "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorTheme": "Tokyo Night",
     "window.titleBarStyle": "custom",
     "editor.detectIndentation": false,
     "vim.enableNeovim": true,
@@ -181,7 +193,6 @@
             }
         ]
     },
-    "workbench.colorTheme": "Rosé Pine",
     "[css]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },

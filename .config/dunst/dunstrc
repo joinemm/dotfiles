@@ -3,7 +3,7 @@
 [global]
     ### Display ###
     monitor = 0
-    follow = none
+    follow = keyboard
 
     ### Geometry ###
     # dynamic width from 0 to 300
@@ -15,16 +15,16 @@
     height = 300
 
     # Position the notification in the top right corner
-    origin = top-right
+    origin = top-center
 
     # Offset from the origin
-    offset = 24x48
+    #offset = 20x48
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
 
     # Maximum number of notification (0 means no limit)
-    notification_limit = 0
+    notification_limit = 2
 
     ### Progress bar ###
 
@@ -58,7 +58,7 @@
     text_icon_padding = 0
 
     # Defines width in pixels of frame around the notification window.
-    frame_width = 0
+    frame_width = 2
 
     # Defines color of the frame around the notification window.
     #frame_color = "#8EC07C"
@@ -191,7 +191,7 @@
     # in pixel size. If the radius is 0, you have no rounded corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 0
+    corner_radius = 12
 
     # Ignore the dbus closeNotification message.
     # Useful to enforce the timeout set by dunst configuration. Without this
@@ -227,23 +227,23 @@
     per_monitor_dpi = false
 
 [urgency_low]
-    frame_color = "#5e81ac"
-    foreground = "#e5e9f0"
-    background = "#1b2234"
-    timeout = 4
+    frame_color = "#e0af68"
+    foreground = "#c0caf5"
+    background = "#16161e"
+    timeout = 3
     #default_icon = /path/to/icon
 
 [urgency_normal]
-    frame_color = "#5e81ac"
-    foreground = "#e5e9f0"
-    background = "#1b2234"
+    frame_color = "#e0af68"
+    foreground = "#c0caf5"
+    background = "#16161e"
     timeout = 6
     #default_icon = /path/to/icon
 
 [urgency_critical]
-    frame_color = "#cc241d"
-    foreground = "#fbf1c7"
-    background = "#1d2021"
+    frame_color = "#f7768e"
+    foreground = "#c0caf5"
+    background = "#16161e"
     timeout = 15
     #default_icon = /path/to/icon
 

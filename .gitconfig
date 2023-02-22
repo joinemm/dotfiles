@@ -5,8 +5,11 @@
 	rebase = false
 [init]
 	defaultBranch = master
+[color]
+	ui = auto
 
 [includeIf "gitdir:~/work/agco/"]
     path = ~/work/agco/.gitconfig_include
-[color]
-	ui = auto
+[includeIf "gitdir:~/code/tiiuae/"]
+    path = ~/code/tiiuae/.gitconfig_include
+
