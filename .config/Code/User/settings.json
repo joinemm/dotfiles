@@ -1,0 +1,193 @@
+{
+    "[dockercompose]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+        "editor.formatOnType": true,
+    },
+    "isort.args": [
+        "--profile",
+        "black"
+    ],
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer"
+    },
+    "[sql]": {
+        "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[mdx]": {
+        "editor.wordWrap": "on"
+    },
+    "[markdown]": {
+        "editor.wordWrap": "on"
+    },
+    "debug.allowBreakpointsEverywhere": true,
+    "debug.console.fontSize": 12,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "editor.cursorStyle": "line",
+    "editor.fontFamily": "monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 12,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.lineNumbers": "on",
+    "editor.linkedEditing": true,
+    "editor.minimap.enabled": false,
+    "editor.stickyTabStops": true,
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "editor.wordWrap": "off",
+    "eslint.format.enable": true,
+    "eslint.packageManager": "yarn",
+    "eslint.probe": [
+        "javascript",
+        "javascriptreact",
+        "typescriptreact",
+        "html",
+        "vue",
+        "markdown"
+    ],
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "vue"
+    ],
+    "explorer.compactFolders": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "files.eol": "\n",
+    "markdown.preview.fontSize": 12,
+    "prettier.printWidth": 100,
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "all",
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.diagnosticMode": "workspace",
+    "python.formatting.blackArgs": [
+        "--line-length=99"
+    ],
+    "python.formatting.provider": "black",
+    "python.languageServer": "Pylance",
+    "python.linting.flake8Args": [
+        "--max-line-length=99",
+        "--ignore=E203,E503,W503,E501"
+    ],
+    "python.linting.flake8Enabled": true,
+    "settingsSync.ignoredSettings": [
+        "editor.fontSize",
+        "debug.console.fontSize",
+        "markdown.preview.fontSize",
+        "terminal.integrated.fontSize",
+        "editor.fontFamily",
+        "workbench.colorTheme"
+    ],
+    "sql-formatter.uppercase": true,
+    "terminal.integrated.fontSize": 12,
+    "typescript.validate.enable": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "u"
+            ],
+            "commands": [
+                "undo"
+            ]
+        },
+        {
+            "before": [
+                "U"
+            ],
+            "commands": [
+                "redo"
+            ]
+        }
+    ],
+    "vim.useCtrlKeys": false,
+    "vim.useSystemClipboard": true,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "workbench.startupEditor": "newUntitledFile",
+    "window.titleBarStyle": "custom",
+    "editor.detectIndentation": false,
+    "vim.enableNeovim": true,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[handlebars]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "name": "One Dark italic",
+                "scope": [
+                    "comment",
+                    "entity.other.attribute-name",
+                    "keyword",
+                    "markup.underline.link",
+                    "storage.modifier",
+                    "storage.type",
+                    "string.url",
+                    "variable.language.super",
+                    "variable.language.this"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "One Dark italic reset",
+                "scope": [
+                    "keyword.operator",
+                    "keyword.other.type",
+                    "storage.modifier.import",
+                    "storage.modifier.package",
+                    "storage.type.built-in",
+                    "storage.type.function.arrow",
+                    "storage.type.generic",
+                    "storage.type.java",
+                    "storage.type.primitive"
+                ],
+                "settings": {
+                    "fontStyle": ""
+                }
+            }
+        ]
+    },
+    "workbench.colorTheme": "Rosé Pine",
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "http.proxySupport": "fallback",
+    "window.zoomLevel": 1,
+    "[nginx]": {
+        "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
+    },
+}
