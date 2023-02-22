@@ -23,17 +23,17 @@ dunst &
 picom -b
 
 # set wallpaper
-if [[ -f ~/.keys ]]; then
-    source ~/.keys
-    random-wallpaper
-else
-    ~/.fehbg
-fi
+[[ -f ~/.keys ]] && source ~/.keys
+random-wallpaper
+#~/.fehbg
 
-if [[ "$(uname -a)" == *"Arch"* ]]; then
-    # keyring
-    # see https://unix.stackexchange.com/a/295652/332452
-    source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
+# see https://unix.stackexchange.com/a/295652/332452
+# and https://bbs.archlinux.org/viewtopic.php?id=224787
+for f in /etc/X11/xinit/xinitrc.d/*; do
+    source "$f"
+done
+
+if [[ "$(uname -a)" == *"-arch"* ]]; then
     # see https://wiki.archlinux.org/title/GNOME/Keyring#xinitrc
     eval $(gnome-keyring-daemon --start)
     export SSH_AUTH_SOCK
