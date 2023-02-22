@@ -1,15 +1,19 @@
 [user]
 	email = joonas@rautiola.co
 	name = Joinemm
+
 [pull]
-	rebase = false
+	rebase = true
+
 [init]
 	defaultBranch = master
+
 [color]
 	ui = auto
 
 [includeIf "gitdir:~/work/agco/"]
     path = ~/work/agco/.gitconfig_include
+
 [includeIf "gitdir:~/code/tiiuae/"]
     path = ~/code/tiiuae/.gitconfig_include
 
