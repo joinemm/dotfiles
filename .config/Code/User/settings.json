@@ -1,6 +1,12 @@
 {
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "[dockercompose]": {
         "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "[handlebars]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -11,23 +17,27 @@
     "[javascriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
+    "[markdown]": {
+        "editor.defaultFormatter": "unifiedjs.vscode-remark"
+    },
+    "[mdx]": {
+        "editor.wordWrap": "on"
+    },
+    "[nginx]": {
+        "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
+    },
     "[python]": {
-        "editor.defaultFormatter": "ms-python.python",
         "editor.codeActionsOnSave": {
             "source.organizeImports": true
         },
-        "editor.formatOnType": true,
-    },
-    "isort.args": [
-        "--profile",
-        "black"
-    ],
-    "[markdown]": {
-        "editor.defaultFormatter": "unifiedjs.vscode-remark"
-        "editor.wordWrap": "on"
+        "editor.defaultFormatter": "ms-python.python",
+        "editor.formatOnType": true
     },
     "[rust]": {
         "editor.defaultFormatter": "rust-lang.rust-analyzer"
@@ -38,18 +48,17 @@
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "[mdx]": {
-        "editor.wordWrap": "on"
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "debug.allowBreakpointsEverywhere": true,
-    "debug.console.fontSize": 12,
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
     "editor.cursorStyle": "line",
+    "editor.detectIndentation": false,
     "editor.fontFamily": "monospace",
     "editor.fontLigatures": true,
-    "editor.fontSize": 12,
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "editor.lineNumbers": "on",
@@ -77,13 +86,19 @@
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "files.eol": "\n",
-    "markdown.preview.fontSize": 12,
+    "isort.args": [
+        "--profile",
+        "black"
+    ],
     "liveServer.settings.useLocalIp": true,
     "prettier.printWidth": 100,
     "prettier.singleQuote": true,
     "prettier.trailingComma": "all",
     "python.analysis.completeFunctionParens": true,
     "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.typeCheckingMode": "basic",
     "python.formatting.blackArgs": [
         "--line-length=99"
     ],
@@ -95,25 +110,9 @@
     ],
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
-    "rpc.appName": "Visual Studio Code",
-    "rpc.buttonEnabled": true,
-    "rpc.detailsEditing": "In {workspace} • {git_branch}",
-    "rpc.detailsViewing": "In {workspace} • {git_branch}",
-    "rpc.idleTimeout": 60,
-    "rpc.lowerDetailsEditing": "{dir_name}/{file_name} :{current_line}/{total_lines}",
-    "rpc.lowerDetailsViewing": "{dir_name}/{file_name}",
-    "rust-analyzer.checkOnSave.allTargets": false,
-    "settingsSync.ignoredSettings": [
-        "editor.fontSize",
-        "debug.console.fontSize",
-        "markdown.preview.fontSize",
-        "terminal.integrated.fontSize",
-        "editor.fontFamily",
-        "workbench.colorTheme"
-    ],
     "sql-formatter.uppercase": true,
-    "terminal.integrated.fontSize": 12,
     "typescript.validate.enable": true,
+    "vim.enableNeovim": true,
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [
@@ -134,71 +133,20 @@
     ],
     "vim.useCtrlKeys": false,
     "vim.useSystemClipboard": true,
+    "window.titleBarStyle": "custom",
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.colorTheme": "Tokyo Night",
-    "window.titleBarStyle": "custom",
-    "editor.detectIndentation": false,
-    "vim.enableNeovim": true,
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[handlebars]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
-    "python.analysis.inlayHints.functionReturnTypes": true,
-    "python.analysis.inlayHints.variableTypes": true,
-    "python.analysis.typeCheckingMode": "basic",
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "editor.tokenColorCustomizations": {
-        "textMateRules": [
-            {
-                "name": "One Dark italic",
-                "scope": [
-                    "comment",
-                    "entity.other.attribute-name",
-                    "keyword",
-                    "markup.underline.link",
-                    "storage.modifier",
-                    "storage.type",
-                    "string.url",
-                    "variable.language.super",
-                    "variable.language.this"
-                ],
-                "settings": {
-                    "fontStyle": "italic"
-                }
-            },
-            {
-                "name": "One Dark italic reset",
-                "scope": [
-                    "keyword.operator",
-                    "keyword.other.type",
-                    "storage.modifier.import",
-                    "storage.modifier.package",
-                    "storage.type.built-in",
-                    "storage.type.function.arrow",
-                    "storage.type.generic",
-                    "storage.type.java",
-                    "storage.type.primitive"
-                ],
-                "settings": {
-                    "fontStyle": ""
-                }
-            }
-        ]
-    },
-    "[css]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "http.proxySupport": "fallback",
-    "window.zoomLevel": 1,
-    "[nginx]": {
-        "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
-    },
+    "settingsSync.ignoredSettings": [
+        "editor.fontSize",
+        "debug.console.fontSize"
+    ],
+    "extensions.ignoreRecommendations": true,
+    "isort.importStrategy": "fromEnvironment",
+    "python.defaultInterpreterPath": "/usr/bin/python",
+    "python.analysis.inlayHints.callArgumentNames": true,
+    "python.analysis.inlayHints.pytestParameters": true,
+    "python.analysis.diagnosticSeverityOverrides": {},
+    "workbench.colorTheme": "Ayu Dark Bordered"
 }
