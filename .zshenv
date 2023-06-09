@@ -16,3 +16,4 @@ export PATH
 export BETTER_EXCEPTIONS=1
 
 export BROWSER=firefox
+export FM=pcmanfm

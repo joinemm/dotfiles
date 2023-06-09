@@ -11,9 +11,10 @@
 [color]
 	ui = auto
 
-[includeIf "gitdir:~/work/agco/"]
-    path = ~/work/agco/.gitconfig_include
+[includeIf "gitdir:~/work/tii/"]
+    path = ~/work/tii/.gitconfig_include
 
-[includeIf "gitdir:~/code/tiiuae/"]
-    path = ~/code/tiiuae/.gitconfig_include
-
+[http]
+	cookiefile = /home/join/.gitcookies
+[fetch]
+	prune = true

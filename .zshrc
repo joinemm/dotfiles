@@ -19,8 +19,6 @@ setopt hist_reduce_blanks   # remove blank lines from history
 setopt histignorespace      # ignore commands starting with a space
 unsetopt hist_verify        # immediately run commands from history
 setopt globdots             # match hidden files without explicitly specifying .
-setopt extendedglob         # better globbing
-setopt nocaseglob           # case insensitive glob
 unsetopt notify             # make background jobs actually background
 setopt correct              # autocorrect
 setopt nocorrectall         # but only autocorrect the command not arguments
@@ -138,15 +136,6 @@ zinit wait lucid for \
   as"program" pick"bin/git-dsf" \
     zdharma-continuum/zsh-diff-so-fancy \
     djui/alias-tips
-  # redxtech/zsh-asdf-direnv \
-  # atload"
-  # zstyle ':prezto:module:thefuck' alias 'fuck'
-  # zstyle ':prezto:module:thefuck' bindkey 'no'
-  # zstyle ':prezto:runcom' zpreztorc '${ZDOTDIR:-$HOME}/.zshrc'
-  # " \
-  #   laggardkernel/zsh-thefuck
-  # atload"zstyle ':completion:*' format '%d'" \
-  #   Aloxaf/fzf-tab
 
 # get nice ls colors
 # choose ls color scheme here
@@ -186,6 +175,8 @@ fi
 
 # Fix ssh sessions with Alacritty
 TERM=xterm-256color
+
+. "$HOME/.asdf/asdf.sh"
 
 # starship.rs prompt
 eval "$(starship init zsh)"
