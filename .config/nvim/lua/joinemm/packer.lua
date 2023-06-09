@@ -10,13 +10,6 @@ return require("packer").startup(function(use)
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
-	use({
-		"folke/tokyonight.nvim",
-		config = function()
-			vim.cmd("colorscheme tokyonight-night")
-		end,
-	})
-
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 	use("theprimeagen/harpoon")
 	use("mbbill/undotree")
@@ -43,6 +36,12 @@ return require("packer").startup(function(use)
 			{ "rafamadriz/friendly-snippets" },
 		},
 	})
+	use({
+		"linux-cultist/venv-selector.nvim",
+		config = function()
+			require("venv-selector").setup({})
+		end,
+	})
 	use("mhartington/formatter.nvim")
 	use({
 		"lewis6991/gitsigns.nvim",
@@ -51,9 +50,9 @@ return require("packer").startup(function(use)
 		end,
 	})
 	use({
-		"norcalli/nvim-colorizer.lua",
+		"NvChad/nvim-colorizer.lua",
 		config = function()
-			require("gitsigns").setup()
+			require("colorizer").setup()
 		end,
 	})
 	use({
@@ -62,5 +61,35 @@ return require("packer").startup(function(use)
 			require("Comment").setup()
 		end,
 	})
+	use({
+		"ms-jpq/chadtree",
+		branch = "chad",
+		run = ":CHADdeps",
+	})
 	use("lukas-reineke/indent-blankline.nvim")
+	use("wakatime/vim-wakatime")
+	use({ "bluz71/vim-moonfly-colors", as = "moonfly" })
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = { "nvim-tree/nvim-web-devicons", opt = true },
+	})
+	use({
+		"weilbith/nvim-code-action-menu",
+		cmd = "CodeActionMenu",
+	})
+	use({
+		"kosayoda/nvim-lightbulb",
+		requires = "antoinemadec/FixCursorHold.nvim",
+	})
+	use({
+		"jose-elias-alvarez/null-ls.nvim",
+		requires = { "nvim-lua/plenary.nvim" },
+	})
+	use({
+		"jay-babu/mason-null-ls.nvim",
+		requires = {
+			"williamboman/mason.nvim",
+			"jose-elias-alvarez/null-ls.nvim",
+		},
+	})
 end)
