@@ -1,7 +1,6 @@
 local chadtree_settings = {
     ["keymap.secondary"] = {},
     ["keymap.tertiary"] = {},
-    ["keymap.collapse"] = {"C-enter"},
     ["keymap.quit"] = {"q", "t"},
     ["keymap.trash"] = {}
 }

@@ -30,10 +30,6 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "q", "<nop>")
 
--- move between buffers with tab and shift-tab
-vim.keymap.set("n", "<tab>", ":bnext<CR>")
-vim.keymap.set("n", "<s-tab>", ":bprevious<CR>", {silent = true})
-
 -- move between windows with ctrl hjkl
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-j>", "<C-w>j")

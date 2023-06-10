@@ -66,6 +66,7 @@ return require("packer").startup(function(use)
 		branch = "chad",
 		run = ":CHADdeps",
 	})
+    use("nvim-tree/nvim-web-devicons")
 	use("lukas-reineke/indent-blankline.nvim")
 	use("wakatime/vim-wakatime")
 	use({ "bluz71/vim-moonfly-colors", as = "moonfly" })
@@ -91,5 +92,9 @@ return require("packer").startup(function(use)
 			"williamboman/mason.nvim",
 			"jose-elias-alvarez/null-ls.nvim",
 		},
+	})
+	use({
+		"folke/trouble.nvim",
+		requires = { "nvim-tree/nvim-web-devicons", opt = true },
 	})
 end)
