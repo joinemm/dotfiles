@@ -16,8 +16,14 @@ require("formatter").setup({
 		json = { require("formatter.filetypes.json").prettier },
 
 		python = {
-			require("formatter.filetypes.python").black,
 			require("formatter.filetypes.python").isort,
+			function()
+				return {
+					exe = "black",
+					args = { "-q", "-", "--line-length=100"},
+					stdin = true,
+				}
+			end,
 		},
 
 		sh = { require("formatter.filetypes.sh").shfmt },
@@ -26,7 +32,7 @@ require("formatter").setup({
 
 		rust = { require("formatter.filetypes.rust").rustfmt },
 
-        c = {require("formatter.filetypes.c").clangformat },
+		c = { require("formatter.filetypes.c").clangformat },
 
 		["*"] = { require("formatter.filetypes.any").remove_trailing_whitespace },
 	},
