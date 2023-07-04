@@ -6,4 +6,3 @@ easyeffects --gapplication-service &
 xrandr --output DisplayPort-0 --primary --mode 3440x1440 --rate 144 --rotate normal
 transmission-daemon
 mullvad-vpn &
-obs-record &
