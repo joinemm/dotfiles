@@ -18,3 +18,5 @@
 	cookiefile = /home/join/.gitcookies
 [fetch]
 	prune = true
+[push]
+	autoSetupRemote = true
