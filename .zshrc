@@ -176,7 +176,7 @@ fi
 # Fix ssh sessions with Alacritty
 TERM=xterm-256color
 
-. "$HOME/.asdf/asdf.sh"
+[[ -z "$HOME/.asdf" ]] && . "$HOME/.asdf/asdf.sh"
 
 # starship.rs prompt
 eval "$(starship init zsh)"
