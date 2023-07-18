@@ -8,6 +8,9 @@ function ColorMyPencils(color)
 	vim.api.nvim_set_hl(0, "DiagnosticVirtualTextWarn", { link = "MoonflyYellow" })
 	vim.api.nvim_set_hl(0, "DiagnosticVirtualTextInfo", { link = "MoonflyBlue" })
 	vim.api.nvim_set_hl(0, "DiagnosticVirtualTextHint", { link = "MoonflyWhite" })
+	vim.api.nvim_set_hl(0, "CursorLine", { bg = "none", underline = true})
+	vim.api.nvim_set_hl(0, "CursorLineNr", { bg = "none", underline = true})
+	vim.api.nvim_set_hl(0, "VirtColumn", { fg = "#e3c78a" })
 end
 
 ColorMyPencils()

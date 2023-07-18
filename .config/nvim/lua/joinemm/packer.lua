@@ -66,7 +66,7 @@ return require("packer").startup(function(use)
 		branch = "chad",
 		run = ":CHADdeps",
 	})
-    use("nvim-tree/nvim-web-devicons")
+	use("nvim-tree/nvim-web-devicons")
 	use("lukas-reineke/indent-blankline.nvim")
 	use("wakatime/vim-wakatime")
 	use({ "bluz71/vim-moonfly-colors", as = "moonfly" })
@@ -97,4 +97,11 @@ return require("packer").startup(function(use)
 		"folke/trouble.nvim",
 		requires = { "nvim-tree/nvim-web-devicons", opt = true },
 	})
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = function()
+			vim.fn["mkdp#util#install"]()
+		end,
+	})
+	use("lukas-reineke/virt-column.nvim")
 end)
