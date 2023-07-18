@@ -2,9 +2,6 @@
 	email = joonas@rautiola.co
 	name = Joinemm
 
-[pull]
-	rebase = true
-
 [init]
 	defaultBranch = master
 
@@ -20,3 +17,6 @@
 	prune = true
 [push]
 	autoSetupRemote = true
+[merge]
+	conflictstyle = diff3
+	tool = vimdiff
