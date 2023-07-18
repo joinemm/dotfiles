@@ -52,3 +52,5 @@ downloads
 .compose-cache
 .vscode
 .ssh
+
+packer_compiled.lua
