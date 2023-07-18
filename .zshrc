@@ -66,6 +66,7 @@ alias ln="ln -iv"
 alias please='sudo $(fc -ln -1)'
 alias lf="lfub"
 alias gs="git status"
+alias neofetch="fastfetch"
 
 # config management
 alias dots="yadm"
