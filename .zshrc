@@ -67,6 +67,7 @@ alias please='sudo $(fc -ln -1)'
 alias lf="lfub"
 alias gs="git status"
 alias neofetch="fastfetch"
+alias ssh="TERM=xterm-256color ssh"
 
 # config management
 alias dots="yadm"
@@ -141,7 +142,7 @@ zinit wait lucid for \
 # get nice ls colors
 # choose ls color scheme here
 # `vivid themes` to see what's available)
-THEME=snazzy
+THEME=dracula
 export LS_COLORS="$(vivid generate $THEME)"
 
 # zstyle
@@ -173,9 +174,6 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-
 if [[ "$ZPROF" = true ]]; then
   zprof
 fi
-
-# Fix ssh sessions with Alacritty
-TERM=xterm-256color
 
 [[ -z "$HOME/.asdf" ]] && . "$HOME/.asdf/asdf.sh"
 

@@ -69,7 +69,7 @@ return require("packer").startup(function(use)
 	use("nvim-tree/nvim-web-devicons")
 	use("lukas-reineke/indent-blankline.nvim")
 	use("wakatime/vim-wakatime")
-	use({ "bluz71/vim-moonfly-colors", as = "moonfly" })
+    use('Mofiqul/dracula.nvim')
 	use({
 		"nvim-lualine/lualine.nvim",
 		requires = { "nvim-tree/nvim-web-devicons", opt = true },
