@@ -12,9 +12,7 @@ path+=$HOME/.cargo/bin
 
 export PATH
 
-# Python Better Exceptions
-export BETTER_EXCEPTIONS=1
-
+export TERMINAL=wezterm
 export EDITOR=nvim
 export BROWSER=firefox
 export FM=pcmanfm

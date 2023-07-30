@@ -22,7 +22,7 @@ require("formatter").setup({
 			function()
 				return {
 					exe = "black",
-					args = { "-q", "-", "--line-length=100"},
+					args = { "-q", "-", "--line-length=88"},
 					stdin = true,
 				}
 			end,

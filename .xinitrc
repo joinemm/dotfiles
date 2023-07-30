@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 # vim: ft=sh
 
-export TERM=kitty
-export EDITOR=nvim
-
 # turn off system beep
 xset b off
 xset b 0 0 0
@@ -41,7 +38,8 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export HOSTNAME=$(cat /etc/hostname)
 [[ -f ~/.init-$HOSTNAME ]] && . ~/.init-$HOSTNAME
 
-# run dwm in a loop
+#exec awesome
+run dwm in a loop
 while true; do
-    dwm 2>~/.dwm.log
+   dwm 2>~/.dwm.log
 done

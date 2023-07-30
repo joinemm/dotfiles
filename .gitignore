@@ -4,10 +4,21 @@ code
 external
 pictures
 downloads
+work
+videos
+games
+music
+mobile
+src
+media
+godot
+go
+documents
+.wine
 
 .local/share
 .local/state
-!.local/share/applications
+!.local/share/applications/
 
 .config/Code
 !.config/Code/User/settings.json
