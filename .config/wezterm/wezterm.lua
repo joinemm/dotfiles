@@ -14,6 +14,7 @@ config.hide_tab_bar_if_only_one_tab = true
 config.font = wezterm.font_with_fallback({
 	"Fira Code",
 	"Twemoji",
+    "Twitter Color Emoji",
 	"Symbols Nerd Font",
 })
 config.front_end = "WebGpu"
