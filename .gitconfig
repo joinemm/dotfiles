@@ -1,6 +1,7 @@
 [user]
 	email = joonas@rautiola.co
 	name = Joinemm
+	signingkey = F0FE53B94A92DCAB
 
 [init]
 	defaultBranch = master
