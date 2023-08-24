@@ -79,3 +79,5 @@ require("mason-null-ls").setup({
 
 -- pop out window for diagnostics
 require("trouble").setup()
+
+require("guess-indent").setup({})

@@ -19,7 +19,7 @@ config.font = wezterm.font_with_fallback({
 })
 config.front_end = "WebGpu"
 
-config.font_size = 12.0
+config.font_size = 11.0
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:

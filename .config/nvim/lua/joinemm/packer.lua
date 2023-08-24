@@ -69,7 +69,7 @@ return require("packer").startup(function(use)
 	use("nvim-tree/nvim-web-devicons")
 	use("lukas-reineke/indent-blankline.nvim")
 	use("wakatime/vim-wakatime")
-    use('Mofiqul/dracula.nvim')
+	use("Mofiqul/dracula.nvim")
 	use({
 		"nvim-lualine/lualine.nvim",
 		requires = { "nvim-tree/nvim-web-devicons", opt = true },
@@ -104,4 +104,10 @@ return require("packer").startup(function(use)
 		end,
 	})
 	use("lukas-reineke/virt-column.nvim")
+	use({
+		"nmac427/guess-indent.nvim",
+		config = function()
+			require("guess-indent").setup({})
+		end,
+	})
 end)

@@ -13,3 +13,6 @@
 [submodule "bin"]
 	path = bin
 	url = git@github.com:joinemm/bin.git
+[submodule ".config/spicetify/Themes/text"]
+	path = .config/spicetify/Themes/text
+	url = git@github.com:joinemm/spotify-text.git
