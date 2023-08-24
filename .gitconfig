@@ -2,16 +2,12 @@
 	email = joonas@rautiola.co
 	name = Joinemm
 	signingkey = F0FE53B94A92DCAB
-
 [init]
 	defaultBranch = master
-
 [color]
 	ui = auto
-
 [includeIf "gitdir:~/work/tii/"]
     path = ~/work/tii/.gitconfig_include
-
 [http]
 	cookiefile = /home/join/.gitcookies
 [fetch]
@@ -21,3 +17,5 @@
 [merge]
 	conflictstyle = diff3
 	tool = vimdiff
+[core]
+	pager = diff-so-fancy | less -FXRi
