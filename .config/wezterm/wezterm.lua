@@ -1,11 +1,6 @@
--- Pull in the wezterm API
 local wezterm = require("wezterm")
-
--- This table will hold the configuration.
 local config = {}
 
--- In newer versions of wezterm, use the config_builder which will
--- help provide clearer error messages
 if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
@@ -17,19 +12,18 @@ config.font = wezterm.font_with_fallback({
     "Twitter Color Emoji",
 	"Symbols Nerd Font",
 })
+
 config.front_end = "WebGpu"
-
 config.font_size = 11.0
--- This is where you actually apply your config choices
 
--- For example, changing the color scheme:
-local scheme = wezterm.color.get_builtin_schemes()["Dracula (Official)"]
+local theme = "Dracula (Official)"
+local scheme = wezterm.color.get_builtin_schemes()[theme]
 scheme.background = "#101116"
-
 config.color_schemes = {
-	["Dracula (Official)"] = scheme,
+	[theme] = scheme,
 }
-config.color_scheme = "Dracula (Official)"
+config.color_scheme = theme
+
 config.window_background_opacity = 0.8
 
 config.keys = { {
@@ -38,5 +32,4 @@ config.keys = { {
 	action = wezterm.action.SpawnWindow,
 } }
 
--- and finally, return the configuration to wezterm
 return config

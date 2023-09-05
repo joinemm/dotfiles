@@ -5,7 +5,7 @@ function ColorMyPencils(color)
 	vim.api.nvim_set_hl(0, "WinSeparator", { bg = "none", fg = "#eaeaea" })
 	vim.api.nvim_set_hl(0, "CursorLine", { bg = "none", underline = true })
 	vim.api.nvim_set_hl(0, "CursorLineNr", { link = "CursorLine" })
-	vim.api.nvim_set_hl(0, "VirtColumn", { fg = "#bd93f9" })
+	vim.api.nvim_set_hl(0, "VirtColumn", { fg = "#000000" })
 	vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
 end
 
