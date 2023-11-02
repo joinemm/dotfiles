@@ -77,8 +77,10 @@ alias etcdots="sudo yadm --yadm-dir /etc/yadm --yadm-data /etc/yadm/data"
 alias c="cd ~/.config"
 alias b="cd ~/bin"
 alias h="cd ~/"
-function s() {
-    cd ~/src/$1
+
+function paste() {
+    local file=${1:-/dev/stdin}
+    curl --data-binary @${file} https://paste.rs
 }
 
 # Install zinit if not installed
