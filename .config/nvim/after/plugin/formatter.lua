@@ -20,13 +20,13 @@ require("formatter").setup({
 		python = {
 			require("formatter.filetypes.python").isort,
 			require("formatter.filetypes.python").autopep8,
-			-- function()
-			-- 	return {
-			-- 		exe = "black",
-			-- 		args = { "-q", "-", "--line-length=88"},
-			-- 		stdin = true,
-			-- 	}
-			-- end,
+			function()
+				return {
+					exe = "black",
+					args = { "-q", "-", "--line-length=88"},
+					stdin = true,
+				}
+			end,
 		},
 
 		sh = { require("formatter.filetypes.sh").shfmt },
