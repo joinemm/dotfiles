@@ -19,6 +19,7 @@ text/html=firefox.desktop;
 inode/directory=spacefm.desktop;
 text/csv=nvim.desktop;
 image/webp=gimp.desktop;
+application/rtf=nvim.desktop;org.pwmt.zathura.desktop;
 
 [Default Applications]
 text/csv=nvim.desktop;
@@ -40,3 +41,5 @@ x-scheme-handler/ftp=firefox.desktop;
 x-scheme-handler/chrome=firefox.desktop;
 message/rfc822=userapp-Thunderbird-LEM330.desktop
 inode/directory=spacefm.desktop
+x-scheme-handler/nxm=modorganizer2-nxm-handler.desktop
+x-scheme-handler/nxm-protocol=ModOrganizer-steamtinkerlaunch-dl.desktop

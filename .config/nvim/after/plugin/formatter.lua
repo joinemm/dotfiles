@@ -20,13 +20,7 @@ require("formatter").setup({
 		python = {
 			require("formatter.filetypes.python").isort,
 			require("formatter.filetypes.python").autopep8,
-			function()
-				return {
-					exe = "black",
-					args = { "-q", "-", "--line-length=88"},
-					stdin = true,
-				}
-			end,
+			require("formatter.filetypes.python").black,
 		},
 
 		sh = { require("formatter.filetypes.sh").shfmt },
@@ -36,6 +30,8 @@ require("formatter").setup({
 		rust = { require("formatter.filetypes.rust").rustfmt },
 
 		c = { require("formatter.filetypes.c").clangformat },
+
+		haskell = { require("formatter.filetypes.haskell").stylish_haskell },
 
 		["*"] = { require("formatter.filetypes.any").remove_trailing_whitespace },
 	},

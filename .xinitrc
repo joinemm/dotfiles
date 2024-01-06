@@ -5,14 +5,18 @@
 xset b off
 xset b 0 0 0
 
+# keyboard layout
+setxkbmap eu
+
 # source Xresources
 xrdb ~/.Xresources
 
 # launch background processes
-dwmblocks &
 dunst &
 picom -b
 flameshot &
+imwheel &
+dwmblocks-wrapped &
 
 # set wallpaper
 # [[ -f ~/.keys ]] && source ~/.keys

@@ -110,4 +110,5 @@ return require("packer").startup(function(use)
 			require("guess-indent").setup({})
 		end,
 	})
+	use({ "mrcjkb/haskell-tools.nvim" })
 end)
